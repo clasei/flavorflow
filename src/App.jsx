@@ -10,7 +10,6 @@ function App() {
       <Navbar />
       <div id='mainPage'>
         <Sidebar />
-        <div>Contenido</div>
         <RecipeList />
       </div>
     </div>

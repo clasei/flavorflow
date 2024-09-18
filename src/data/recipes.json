@@ -26,9 +26,9 @@
         "Grill",
         "Healthy"
       ],
-      "image": "https://example.com/grilled-lemon-chicken.jpg",
+      "image": "src/assets/recipesImg/high-view-delicious-salad-brown-plate.jpg",
       "rating": 4.5,
-      "liked": true,
+      "liked": false,
       "mealType": [
         "Dinner"
       ]

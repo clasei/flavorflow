@@ -52,3 +52,7 @@
   display: flex;
   flex-direction: row;
 }
+
+.recipeImg{
+  width: 200px;
+}
