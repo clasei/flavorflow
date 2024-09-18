@@ -1,0 +1,423 @@
+[
+    {
+      "id": 1,
+      "name": "Grilled Lemon Herb Chicken",
+      "ingredients": [
+        "4 boneless chicken breasts",
+        "2 lemons (juice and zest)",
+        "2 cloves garlic (minced)",
+        "1/4 cup olive oil",
+        "1 teaspoon dried oregano",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "In a bowl, mix lemon juice, zest, garlic, olive oil, oregano, salt, and pepper.",
+        "Marinate the chicken breasts in the mixture for at least 30 minutes.",
+        "Grill the chicken on medium-high heat for 6-8 minutes per side, until cooked through.",
+        "Serve with a fresh lemon wedge."
+      ],
+      "cookingTimeMinutes": 20,
+      "servings": 4,
+      "difficulty": "Medium",
+      "cuisine": "Mediterranean",
+      "caloriesPerServing": 220,
+      "tags": [
+        "Chicken",
+        "Grill",
+        "Healthy"
+      ],
+      "image": "https://example.com/grilled-lemon-chicken.jpg",
+      "rating": 4.5,
+      "liked": true,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Vegetable Stir-Fry with Tofu",
+      "ingredients": [
+        "200g firm tofu (cubed)",
+        "1 red bell pepper (sliced)",
+        "1 zucchini (sliced)",
+        "1 carrot (julienned)",
+        "2 tablespoons soy sauce",
+        "1 tablespoon sesame oil",
+        "1 clove garlic (minced)",
+        "1 teaspoon grated ginger"
+      ],
+      "instructions": [
+        "Heat sesame oil in a pan and sauté garlic and ginger.",
+        "Add the tofu and cook until golden brown.",
+        "Add vegetables and soy sauce, stir-frying for 5-7 minutes until tender-crisp.",
+        "Serve hot over rice."
+      ],
+      "cookingTimeMinutes": 15,
+      "servings": 2,
+      "difficulty": "Easy",
+      "cuisine": "Asian",
+      "caloriesPerServing": 180,
+      "tags": [
+        "Vegan",
+        "Gluten-Free",
+        "Nut-Free"
+      ],
+      "image": "https://example.com/veggie-stir-fry-tofu.jpg",
+      "rating": 4.3,
+      "liked": true,
+      "mealType": [
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Spaghetti Carbonara",
+      "ingredients": [
+        "200g spaghetti",
+        "100g pancetta",
+        "2 eggs",
+        "50g grated Parmesan cheese",
+        "1 clove garlic (minced)",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Cook the spaghetti according to package instructions.",
+        "In a pan, fry pancetta until crispy. Remove from heat and stir in garlic.",
+        "Beat the eggs with Parmesan, salt, and pepper.",
+        "Drain the spaghetti and toss with the pancetta and egg mixture while still hot.",
+        "Serve immediately."
+      ],
+      "cookingTimeMinutes": 25,
+      "servings": 2,
+      "difficulty": "Medium",
+      "cuisine": "Italian",
+      "caloriesPerServing": 600,
+      "tags": [
+        "Pasta",
+        "Italian",
+        "Comfort Food"
+      ],
+      "image": "https://example.com/spaghetti-carbonara.jpg",
+      "rating": 4.8,
+      "liked": true,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Quinoa Salad with Avocado",
+      "ingredients": [
+        "1 cup cooked quinoa",
+        "1 avocado (diced)",
+        "1 cucumber (sliced)",
+        "1/4 cup feta cheese (crumbled)",
+        "1 tablespoon olive oil",
+        "1 tablespoon lemon juice",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Mix quinoa, avocado, cucumber, and feta in a bowl.",
+        "Drizzle with olive oil and lemon juice.",
+        "Season with salt and pepper.",
+        "Toss gently and serve chilled."
+      ],
+      "cookingTimeMinutes": 10,
+      "servings": 2,
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "caloriesPerServing": 350,
+      "tags": [
+        "Salad",
+        "Healthy",
+        "Gluten-Free"
+      ],
+      "image": "https://example.com/quinoa-avocado-salad.jpg",
+      "rating": 4.4,
+      "liked": true,
+      "mealType": [
+        "Lunch"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Mushroom Risotto",
+      "ingredients": [
+        "1 cup Arborio rice",
+        "200g mushrooms (sliced)",
+        "1/2 onion (chopped)",
+        "2 cloves garlic (minced)",
+        "4 cups vegetable broth",
+        "1/4 cup Parmesan cheese (grated)",
+        "2 tablespoons butter",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "In a pan, sauté onions, garlic, and mushrooms in butter until soft.",
+        "Add Arborio rice and cook for 1-2 minutes.",
+        "Gradually add broth, stirring constantly, until rice is creamy and cooked through.",
+        "Stir in Parmesan cheese and season with salt and pepper."
+      ],
+      "cookingTimeMinutes": 40,
+      "servings": 4,
+      "difficulty": "Medium",
+      "cuisine": "Italian",
+      "caloriesPerServing": 500,
+      "tags": [
+        "Vegetarian",
+        "Comfort Food",
+        "Dinner"
+      ],
+      "image": "https://example.com/mushroom-risotto.jpg",
+      "rating": 4.6,
+      "liked": true,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Classic Beef Tacos",
+      "ingredients": [
+        "500g ground beef",
+        "8 taco shells",
+        "1 cup shredded lettuce",
+        "1/2 cup diced tomatoes",
+        "1/2 cup shredded cheddar cheese",
+        "1 packet taco seasoning",
+        "1/4 cup sour cream"
+      ],
+      "instructions": [
+        "Cook ground beef in a pan until browned.",
+        "Add taco seasoning and cook according to package instructions.",
+        "Fill taco shells with beef, lettuce, tomatoes, cheese, and sour cream.",
+        "Serve immediately."
+      ],
+      "cookingTimeMinutes": 20,
+      "servings": 4,
+      "difficulty": "Easy",
+      "cuisine": "Mexican",
+      "caloriesPerServing": 450,
+      "tags": [
+        "Tacos",
+        "Mexican",
+        "Quick"
+      ],
+      "image": "https://example.com/beef-tacos.jpg",
+      "rating": 4.7,
+      "liked": true,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Berry Smoothie Bowl",
+      "ingredients": [
+        "1/2 cup frozen mixed berries",
+        "1/2 banana",
+        "1/4 cup almond milk",
+        "1 tablespoon chia seeds",
+        "1 tablespoon honey",
+        "Toppings: granola, fresh fruit, coconut flakes"
+      ],
+      "instructions": [
+        "Blend frozen berries, banana, almond milk, chia seeds, and honey until smooth.",
+        "Pour into a bowl and top with granola, fresh fruit, and coconut flakes.",
+        "Serve immediately."
+      ],
+      "cookingTimeMinutes": 5,
+      "servings": 1,
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "caloriesPerServing": 250,
+      "tags": [
+        "Breakfast",
+        "Healthy",
+        "Vegan"
+      ],
+      "image": "https://example.com/berry-smoothie-bowl.jpg",
+      "rating": 4.9,
+      "liked": true,
+      "mealType": [
+        "Breakfast"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Lentil Soup",
+      "ingredients": [
+        "1 cup dried lentils",
+        "1 carrot (chopped)",
+        "1 celery stalk (chopped)",
+        "1 onion (chopped)",
+        "2 cloves garlic (minced)",
+        "4 cups vegetable broth",
+        "1 teaspoon cumin",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Sauté onion, garlic, carrot, and celery in a pot.",
+        "Add lentils, broth, and cumin.",
+        "Simmer for 30 minutes until lentils are tender.",
+        "Season with salt and pepper and serve."
+      ],
+      "cookingTimeMinutes": 35,
+      "servings": 4,
+      "difficulty": "Easy",
+      "cuisine": "Middle Eastern",
+      "caloriesPerServing": 280,
+      "tags": [
+        "Vegan",
+        "Soup",
+        "Gluten-Free"
+      ],
+      "image": "https://example.com/lentil-soup.jpg",
+      "rating": 4.2,
+      "liked": true,
+      "mealType": [
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Banana Pancakes",
+      "ingredients": [
+        "1 ripe banana",
+        "2 eggs",
+        "1/2 teaspoon baking powder",
+        "1/2 cup rolled oats",
+        "1/4 cup milk",
+        "Maple syrup for serving"
+      ],
+      "instructions": [
+        "Mash the banana in a bowl.",
+        "Add eggs, oats, baking powder, and milk, and mix well.",
+        "Cook in a non-stick pan until golden brown on both sides.",
+        "Serve with maple syrup."
+      ],
+      "cookingTimeMinutes": 10,
+      "servings": 2,
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "caloriesPerServing": 300,
+      "tags": [
+        "Breakfast",
+        "Pancakes",
+        "Healthy"
+      ],
+      "image": "https://example.com/banana-pancakes.jpg",
+      "rating": 4.8,
+      "liked": true,
+      "mealType": [
+        "Breakfast"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Thai Green Curry",
+      "ingredients": [
+        "200g chicken breast (sliced)",
+        "1 tablespoon green curry paste",
+        "1 can coconut milk",
+        "1 red bell pepper (sliced)",
+        "1 zucchini (sliced)",
+        "1 tablespoon fish sauce",
+        "Fresh basil leaves for garnish"
+      ],
+      "instructions": [
+        "In a pot, cook green curry paste for 1 minute.",
+        "Add chicken and cook until browned.",
+        "Stir in coconut milk, vegetables, and fish sauce.",
+        "Simmer for 15 minutes, then garnish with basil leaves."
+      ],
+      "cookingTimeMinutes": 25,
+      "servings": 2,
+      "difficulty": "Medium",
+      "cuisine": "Thai",
+      "caloriesPerServing": 450,
+      "tags": [
+        "Curry",
+        "Thai",
+        "Spicy"
+      ],
+      "image": "https://example.com/thai-green-curry.jpg",
+      "rating": 4.5,
+      "liked": true,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Baked Salmon with Asparagus",
+      "ingredients": [
+        "2 salmon fillets",
+        "1 bunch asparagus (trimmed)",
+        "1 lemon (sliced)",
+        "1 tablespoon olive oil",
+        "Salt and pepper to taste"
+      ],
+      "instructions": [
+        "Preheat oven to 400°F (200°C).",
+        "Place salmon and asparagus on a baking sheet.",
+        "Drizzle with olive oil and season with salt and pepper.",
+        "Top salmon with lemon slices.",
+        "Bake for 12-15 minutes until salmon is cooked through."
+      ],
+      "cookingTimeMinutes": 15,
+      "servings": 2,
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "caloriesPerServing": 350,
+      "tags": [
+        "Salmon",
+        "Healthy",
+        "Gluten-Free"
+      ],
+      "image": "https://example.com/baked-salmon.jpg",
+      "rating": 4.6,
+      "liked": true,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Chocolate Mug Cake",
+      "ingredients": [
+        "3 tablespoons flour",
+        "2 tablespoons cocoa powder",
+        "2 tablespoons sugar",
+        "1/4 teaspoon baking powder",
+        "3 tablespoons milk",
+        "1 tablespoon vegetable oil",
+        "1/4 teaspoon vanilla extract"
+      ],
+      "instructions": [
+        "In a microwave-safe mug, mix all dry ingredients.",
+        "Add wet ingredients and stir until smooth.",
+        "Microwave on high for 1 minute.",
+        "Let cool slightly and enjoy."
+      ],
+      "cookingTimeMinutes": 5,
+      "servings": 1,
+      "difficulty": "Easy",
+      "cuisine": "Dessert",
+      "caloriesPerServing": 300,
+      "tags": [
+        "Dessert",
+        "Chocolate",
+        "Quick"
+      ],
+      "image": "https://example.com/chocolate-mug-cake.jpg",
+      "rating": 4.9,
+      "liked": true,
+      "mealType": [
+        "Dessert"
+      ]
+    }
+]
+
