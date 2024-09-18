@@ -1,14 +1,28 @@
+import { useState } from "react"
 import RecipeCard from "./RecipeCard"
-//import RecipeList from "../data/recipes.json"
+import Recipes from "../data/recipes.json"
+
 
 function RecipeList() {
 
+  const [ recipesArr, setRecipes ] = useState(Recipes)
+
+  const handleDelete = (index) => {
+    console.log("removiendo elemento", index)
+    const clone = recipesArr.slice(0)
+    clone.splice(index, 1)
+    setRecipes(clone)
+  }
+
   return (
-    <div>
+    <>
+       {recipesArr.map((eachRecipe, index)=>
+      (
         <div>
-          <RecipeCard />
+          <RecipeCard name={eachRecipe} handleDelete = {handleDelete} index={index}/>
          </div>
-    </div>
+        ))}
+    </>
   )
 }
 
