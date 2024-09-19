@@ -8,6 +8,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-primary500: #727F68; 
+  --color-primary400: #899482;
+  --color-secundary500: #33382E;
+  --color-accent500: #F9AF42;
+  --color-neutral500: #FEFDFA;
 }
 
 * {
@@ -16,7 +22,7 @@
   box-sizing: border-box;
 }
 
-#navBar{
+/* #navBar{
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -46,13 +52,60 @@
 
 #githubIcon{
   width: 32px;
-}
+}*/
 
 #mainPage{
   display: flex;
   flex-direction: row;
 }
 
+body{
+  max-height: 100vh;
+}
+
 .recipeImg{
   width: 200px;
+} 
+
+.sidebar {
+  height: 100vh;
+  display: flex; 
+  color: var(--color-neutral500);
+}
+
+.sidebar section {
+  margin-left: 10%;
+}
+
+.sidebar hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 0;
+  border-top: 0.2px solid var(--color-primary400);
+}
+
+.sidebarIcons {
+  width: 72px; 
+  background-color: var(--color-secundary500); 
+}
+
+.sidebarText {
+  width: 264px; 
+  background-color: var(--color-primary500);
+}
+
+.sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFooter{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebarProfile{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.profileImg{
+  width: 32px;
 }
