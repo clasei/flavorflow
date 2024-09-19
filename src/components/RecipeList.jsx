@@ -1,7 +1,8 @@
 import { useState } from "react"
 import RecipeCard from "./RecipeCard"
 import Recipes from "../data/recipes.json"
-
+import {Routes, Route, Link} from "react-router-dom"
+import RecipeDetails from "../pages/RecipeDetails.jsx"
 
 function RecipeList() {
 
@@ -18,9 +19,11 @@ function RecipeList() {
     <>
        {recipesArr.map((eachRecipe, index)=>
       (
-        <div>
+        <li>
           <RecipeCard name={eachRecipe} handleDelete = {handleDelete} index={index}/>
-         </div>
+
+          <Link to={`/recipes/${eachRecipe.name}`} element={< RecipeDetails />}>{eachRecipe.name}</Link>
+         </li>
         ))}
     </>
   )

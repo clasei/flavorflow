@@ -1,5 +1,5 @@
 import Footer from "./Footer"
-import {Routes, Route, Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 import Dashboard from "../pages/Dashboard.jsx"
 import About from "../pages/About.jsx"
 import Navbar from "./NavBar.jsx"
