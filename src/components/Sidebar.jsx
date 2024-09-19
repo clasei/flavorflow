@@ -34,10 +34,19 @@ function Sidebar() {
         <hr />
 
         <section className="sidebarCategories">
+        <p className="smallHeader">Categories</p>
           <p>Breakfast</p>
           <p>Lunch</p>
           <p>Snack</p>
           <p>Dinner</p>
+        </section>
+
+        <hr />
+
+        <section className="sidebarFav">
+        <p className="smallHeader">Featured</p>
+          <p>Favorites</p>
+          <p>Liked</p>
         </section>
 
         <hr />

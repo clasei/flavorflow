@@ -57,10 +57,19 @@
 #mainPage{
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }
 
 body{
   max-height: 100vh;
+}
+
+.mainContainer{
+  flex-grow: 1; 
+  padding: 20px;
+  height: 100vh; 
+  overflow-y: auto; 
+  background-color: var(--color-neutral500); 
 }
 
 .recipeImg{
@@ -69,8 +78,11 @@ body{
 
 .sidebar {
   height: 100vh;
+  width: 336px;
   display: flex; 
   color: var(--color-neutral500);
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .sidebar section {
@@ -94,7 +106,7 @@ body{
   background-color: var(--color-primary500);
 }
 
-.sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFooter{
+.sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFooter, .sidebarFav{
   display: flex;
   flex-direction: column;
   align-items: flex-start;

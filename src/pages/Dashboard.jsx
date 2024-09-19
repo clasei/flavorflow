@@ -2,7 +2,7 @@ import RecipeList from '../components/RecipeList.jsx'
 
 function Dashboard() {
   return (
-    <div>
+    <div className='mainContainer'>
       <RecipeList />
     </div>
   )
