@@ -9,20 +9,15 @@ function RecipeDetails() {
     return eachRecipe.name === param.recipeName
   })
 
-
-  {/* function UserData() {
-
-      const parametrosDinamicos = useParams()
-      
-      const userToDisplay = allStudent.find((eachStudent) => {
-        return eachStudent.username === parametrosDinamicos.nombreDeUsuario
-      {) */}
-
-
   
   return (
     <div>
+      
       <h1>{recipeToDisplay.name}</h1>
+      <p>{recipeToDisplay.ingredients}</p>
+      <p>{recipeToDisplay.instructions}</p>
+      <p>{recipeToDisplay.tags}</p>
+
     </div>
   )
 }
