@@ -5,7 +5,7 @@ import thumbDown from "../assets/icons/thumb_down.svg"
 
 function RecipeCard(props) {
   console.log(props.handleDelete)
- 
+ {/*Tener en cuenta el traer sólo las propiedades que necesitamos  -en lugar de pasarle como parámetro props-*/}
   return (
     <div>
        
