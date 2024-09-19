@@ -20,7 +20,7 @@ function RecipeList() {
        {recipesArr.map((eachRecipe, index)=>
       (
         <li>
-          <RecipeCard name={eachRecipe} handleDelete = {handleDelete} index={index}/>
+          <RecipeCard eachRecipe={eachRecipe} handleDelete = {handleDelete} index={index}/>
 
           <Link to={`/recipes/${eachRecipe.name}`} element={< RecipeDetails />}>{eachRecipe.name}</Link>
          </li>

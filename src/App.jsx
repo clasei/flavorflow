@@ -19,7 +19,7 @@ function App() {
        <Routes>
           <Route path="/" element={<Dashboard/>}></Route>
           <Route path="/About" element={<About/>}></Route>
-          <Route path="//recipes/:recipeName" element={<RecipeDetails/>}></Route>
+          <Route path="/recipes/:recipeName" element={<RecipeDetails/>}></Route>
           <Route path="*" element={<NotFound/>}></Route>
        </Routes>
       </div>

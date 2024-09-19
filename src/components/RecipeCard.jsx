@@ -10,10 +10,10 @@ function RecipeCard(props) {
     <div>
        
        <div key={props.id}>
-        <img className="recipeImg" src={props.name.image} alt="" />
-        <p>{props.name.name}</p>
+        <img className="recipeImg" src={props.eachRecipe.image} alt="" />
+        <p>{props.eachRecipe.name}</p>
 
-        <p>Did you liked it? {props.name.liked ? (<img src={thumbUp}/>) : (<img src ={thumbDown}/>)}</p>
+        <p>Did you liked it? {props.eachRecipe.liked ? (<img src={thumbUp}/>) : (<img src ={thumbDown}/>)}</p>
 
         <button onClick={() => props.handleDelete(props.index)} style={{backgroundColor:"darkred"}}>Borrar</button>
        </div>
