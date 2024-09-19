@@ -5,6 +5,7 @@ import About from "../pages/About.jsx"
 import Navbar from "./NavBar.jsx"
 
 import profileImg from "../assets/icons/profile.svg";
+import logoImg from "../assets/icons/logo.png";
 
 
 function Sidebar() {
@@ -12,8 +13,10 @@ function Sidebar() {
 
     <div className="sidebar" id="">
 
-      <div className="sidebarIcons">
-        
+    <div className="sidebarIcons">
+    <section className="sidebarProfileXs">
+        <img className="logoImg" src={logoImg} alt="" />
+      </section>
       </div>
 
 

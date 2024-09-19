@@ -83,6 +83,7 @@ body{
   color: var(--color-neutral500);
   overflow: hidden;
   flex-shrink: 0;
+
 }
 
 .sidebar section {
@@ -96,12 +97,18 @@ body{
   border-top: 0.2px solid var(--color-primary400);
 }
 
+.logoImg{
+  width: 60%;
+}
+
 .sidebarIcons {
+  padding-top: 32px;
   width: 72px; 
   background-color: var(--color-secundary500); 
 }
 
 .sidebarText {
+  padding-top: 32px;
   width: 264px; 
   background-color: var(--color-primary500);
 }
