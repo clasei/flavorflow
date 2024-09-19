@@ -15,6 +15,8 @@ function RecipeList() {
     setRecipes(clone)
   }
 
+{/*hay que añadir el estado en App.jsx*/}
+
   return (
     <>
        {recipesArr.map((eachRecipe, index)=>
