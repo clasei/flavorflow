@@ -6,6 +6,7 @@ import About from "./pages/About.jsx"
 import {Routes, Route} from "react-router-dom"
 import NotFound from './pages/NotFound.jsx'
 import RecipeDetails from './pages/RecipeDetails.jsx'
+import AddRecipe from './pages/AddRecipe.jsx'
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
        <Routes>
           <Route path="/" element={<Dashboard/>}></Route>
           <Route path="/About" element={<About/>}></Route>
-          <Route path="/recipes/:recipeName" element={<RecipeDetails/>}></Route>
+          <Route path="/Recipes/:recipeName" element={<RecipeDetails/>}></Route>
+          <Route path="/AddRecipe" element={<AddRecipe/>}></Route>
           <Route path="*" element={<NotFound/>}></Route>
        </Routes>
       </div>
