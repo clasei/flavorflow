@@ -9,7 +9,7 @@ function Dashboard() {
       <RecipeList />
 
       <Link to="/AddRecipe">
-      <button>Add recipe</button>
+        <button>Add recipe</button>
       </Link>
 
     </div>
