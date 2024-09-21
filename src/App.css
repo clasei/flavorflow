@@ -102,11 +102,10 @@ body{
   background-color: var(--color-secundary500); 
 }
 
-.sidebarIcons section{
+.sidebarLinksXs, .sidebarProfileXs, .sidebarCategoriesXs, .sidebarFavXs{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24PX;
 }
 
 .logoImg{
@@ -125,6 +124,28 @@ body{
   border: 0;
   border-top: 0.2px solid var(--color-primary400);
 }
+
+.sidebarFavXs button {
+  width: 65%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; 
+  font-size: 14px;
+  background-color: var(--color-accent500);
+  color: var(--color-secundary500);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebarFavXs button:hover {
+  background-color: var(--color-accent600);
+  transition: 0.5s;
+}
+
 
 /* Sidebar text*/
 
@@ -145,7 +166,7 @@ body{
   border-top: 0.2px solid var(--color-primary400);
 }
 
-.sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFooter, .sidebarFav{
+.sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFav{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -198,6 +219,12 @@ a:hover {
   width: 14px;
 }
 
+.smallHeader{
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-secundary500);
+}
+
 /* Side by side sidebars css */
 
 .sidebarProfile, .sidebarProfileXs{
@@ -205,13 +232,62 @@ a:hover {
 }
 
 .sidebarLinks, .sidebarLinksXs {
-
+  height: 112px;
 }
 
 .sidebarLinks {
-  
+  gap: 20px;
+  margin-bottom: 4px;
 }
 
 .sidebarLinksXs {
-
+  margin-top: 4px;
+  gap: 26PX;
 }
+
+.sidebarCategories, .sidebarCategoriesXs {
+  height: 300px;
+}
+
+.sidebarCategories {
+  gap: 20px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebarCategoriesXs {
+  margin-top: 51px;
+  gap: 24PX;
+  margin-bottom: -32px;
+}
+
+.sidebarFav, .sidebarFavXs {
+  height: 200px;
+}
+
+.sidebarFav {
+  gap: 20px;
+  margin-bottom: 39px;
+}
+
+.sidebarFavXs {
+  margin-top: 38px;
+  gap: 24PX;
+}
+
+.sidebarFooter, .sidebarFooterXs {
+  height: 40%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sidebarFooterXs{
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+/* .sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFooter, .sidebarFav{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */

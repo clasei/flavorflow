@@ -43,6 +43,9 @@ function Sidebar() {
         <section className="sidebarFavXs">
           <img src={heartImg} alt="favorite" />
           <img src={thumbsUpImg} alt="liked" />
+          <button>
+            <img id="buttonLargeAddImg" src={addImg} alt="" />
+          </button>
         </section>
 
         <hr />
