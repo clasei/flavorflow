@@ -4,6 +4,7 @@ import Recipes from "../data/recipes.json"
 import {Routes, Route, Link} from "react-router-dom"
 import RecipeDetails from "../pages/RecipeDetails.jsx"
 
+
 function RecipeList() {
 
   const [ recipesArr, setRecipes ] = useState(Recipes)
@@ -18,16 +19,16 @@ function RecipeList() {
 {/*hay que añadir el estado en App.jsx*/}
 
   return (
-    <>
+    <div  id="eachCardOnList">
        {recipesArr.map((eachRecipe, index)=>
       (
-        <li>
+        <div>
           <RecipeCard eachRecipe={eachRecipe} handleDelete = {handleDelete} index={index}/>
 
-          <Link to={`/recipes/${eachRecipe.name}`} element={< RecipeDetails />}>{eachRecipe.name}</Link>
-         </li>
+          {/* <Link to={`/recipes/${eachRecipe.name}`} element={< RecipeDetails />}>{eachRecipe.name}</Link> */}
+         </div>
         ))}
-    </>
+    </div>
   )
 }
 
