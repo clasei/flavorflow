@@ -186,12 +186,12 @@ body{
   border-radius: 500px;
 }
 
-a{
+.sidebar a{
   color: var(--color-neutral500);
   text-decoration: none;
 }
 
-a:hover { 
+.sidebar a:hover { 
   color: var(--color-secundary500);
   transition: 0.25s;
 }
