@@ -5,9 +5,13 @@ import addImg from "../assets/icons/add.svg";
 function Dashboard() {
   return (
     <div className='mainContainer'>
-
-      <RecipeList />
-
+      <div className="mainBar">
+        <p>Home</p>
+      </div>
+      <main>
+        <RecipeList />
+      </main>
+      
       <Link id="buttonDashboard" to="/AddRecipe">
           <img id="buttonLargeAddImg" src={addImg} alt="" />
           <p>Add recipe</p>

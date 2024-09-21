@@ -4,17 +4,17 @@ function AddRecipe() {
 
   const [newAddedRecipe, setNewRecipe] = useState({})
 
-  // newAddedRecipe = {
-  //   name: name,
-  //   cookingTimeMinutes: cookingTimeMinutes,
-  //   servings: servings,
-  //   difficulty: difficulty,
-  //   cuisine: cuisine,
-  //   caloriesPerServing: caloriesPerServing,
-  //   image: image,
-  //   rating: rating,
-  //   liked: liked,
-  // }
+  newAddedRecipe = {
+    name: name,
+    cookingTimeMinutes: cookingTimeMinutes,
+    servings: servings,
+    difficulty: difficulty,
+    cuisine: cuisine,
+    caloriesPerServing: caloriesPerServing,
+    image: image,
+    rating: rating,
+    liked: liked,
+  }
 
   /* const [name, setName] = useState("")
   const [cookingTimeMinutes, setCookingTimeMinutes] = useState(0)

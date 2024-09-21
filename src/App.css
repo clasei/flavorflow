@@ -18,6 +18,7 @@
   --color-accent500: #F9AF42;
   --color-accent600: #e08a08;
   --color-neutral500: #FEFDFA;
+  --color-neutral600: #DFDECE;
 
   --font-text: 'Roboto', sans-serif;
 }
@@ -41,7 +42,6 @@ body{
 
 .mainContainer{
   flex-grow: 1; 
-  padding: 20px;
   height: 100vh; 
   overflow-y: auto; 
   background-color: var(--color-neutral500); 
@@ -52,7 +52,7 @@ body{
 
 .sidebar {
   height: 100vh;
-  width: 336px;
+  width: 328px;
   display: flex; 
   color: var(--color-neutral500);
   overflow: hidden;
@@ -125,12 +125,16 @@ body{
   padding: 16px 0px;
 }
 
+
+
 .sidebarText hr {
   width: 80%;
   margin: 0;
   border: 0;
   border-top: 0.2px solid var(--color-primary400);
 }
+
+
 
 .sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFav{
   display: flex;
@@ -273,6 +277,7 @@ body{
   position: fixed;
   bottom: 64px;
   right: 64px;
+  z-index: 10;
 }
 
 #buttonDashboard a{
@@ -293,9 +298,6 @@ body{
   align-items: flex-start;
 }
 
-.cardHeader p{
-
-}
 
 .cardImg {
   position: relative; 
@@ -321,7 +323,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(25,28,23, 1) 10%, rgba(0, 128, 0, 0) 100%);
+  background: linear-gradient(to bottom, rgba(25,28,23, 1) 5%, rgba(0, 128, 0, 0) 100%);
   z-index: 1;
   border-radius: 15px 15px 0px 0px; 
   pointer-events: none; 
@@ -357,4 +359,16 @@ padding: 4px 8px;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 32px;
+  justify-content: center;
+  margin: 32px 0px;
+}
+
+.mainBar{
+  background-color: var(--color-neutral600);
+  margin: 0;
+  padding: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
