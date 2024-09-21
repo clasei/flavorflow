@@ -14,7 +14,7 @@ import dinnerImg from "../assets/icons/dinner.svg";
 import dessertImg from "../assets/icons/dessert.svg";
 import snackImg from "../assets/icons/snack.svg";
 import heartImg from "../assets/icons/heart.svg";
-import thumbsUpImg from "../assets/icons/thumbsUp.svg";
+import thumbsUp1Img from "../assets/icons/thumbsUp1.svg";
 import githubImg from "../assets/icons/github.svg";
 import addImg from "../assets/icons/add.svg";
 
@@ -42,7 +42,7 @@ function Sidebar() {
 
         <section className="sidebarFavXs">
           <img src={heartImg} alt="favorite" />
-          <img src={thumbsUpImg} alt="liked" />
+          <img src={thumbsUp1Img} alt="liked" />
           <Link className="buttonSmall" to="/AddRecipe">
             <img id="buttonLargeAddImg" src={addImg} alt="" />
           </Link>

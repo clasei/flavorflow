@@ -17,6 +17,12 @@ import caloriesImg from "../assets/icons/calories.svg";
 import deleteImg from "../assets/icons/delete.svg";
 import openImg from "../assets/icons/open.svg";
 
+import star0Img from "../assets/icons/star0.svg";
+import star1Img from "../assets/icons/star1.svg";
+import thumbsUp0Img from "../assets/icons/thumbsUp0.svg";
+import thumbsUp1Img from "../assets/icons/thumbsUp1.svg";
+import heartImg from "../assets/icons/heart.svg";
+
 
 function RecipeCard(props) {
 
@@ -35,12 +41,36 @@ function RecipeCard(props) {
     }
   };
 
+  const getRating = (rating) => {
+    const maxStars = 5;
+    const stars = [];
+  
+    for (let i = 1; i <= maxStars; i++) {
+      if (i <= rating) {
+        stars.push(<img key={i} src={star1Img} alt="full star" />);
+      } else {
+        stars.push(<img key={i} src={star0Img} alt="empty star" />);
+      }
+    }
+  
+    return <div className="star-rating">{stars}</div>; // Devuelve un contenedor con las estrellas
+  };
+
   
   console.log(props.handleDelete)
  {/*Tener en cuenta el traer sólo las propiedades que necesitamos  -en lugar de pasarle como parámetro props-*/}
   return (
     <div>
        <div className="card" key={props.id}>
+
+        <section className="topIcons">
+          <div className="fav">
+
+          </div>
+          <div className="rating">
+          {getRating(props.recipeRating)} 
+          </div>
+        </section>
 
         <section className="cardImg">
           <img className="recipeImg" src={props.eachRecipe.image} alt="" />
