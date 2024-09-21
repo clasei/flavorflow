@@ -1,9 +1,7 @@
-import { useState } from "react"
-import {Link} from "react-router-dom"
-import Recipes from "../data/recipes.json"
-import thumbUp from "../assets/icons/thumb_up.svg"
-import thumbDown from "../assets/icons/thumb_down.svg"
-import RecipeDetails from "../pages/RecipeDetails.jsx"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Recipes from "../data/recipes.json";
+import RecipeDetails from "../pages/RecipeDetails.jsx";
 
 import veganImg from "../assets/icons/vegan.svg";
 import lactoseImg from "../assets/icons/lactose.svg";
@@ -21,21 +19,32 @@ import star0Img from "../assets/icons/star0.svg";
 import star1Img from "../assets/icons/star1.svg";
 import thumbsUp0Img from "../assets/icons/thumbsUp0.svg";
 import thumbsUp1Img from "../assets/icons/thumbsUp1.svg";
-import heartImg from "../assets/icons/heart.svg";
-
+import heart0Img from "../assets/icons/heart0.svg";
+import heart1Img from "../assets/icons/heart1.svg";
+import editImg from "../assets/icons/edit.svg";
 
 function RecipeCard(props) {
+  const [liked, setLiked] = useState(props.eachRecipe.liked);
+  const [favorited, setFavorited] = useState(false);
+
+  const handleLike = () => {
+    setLiked((prevLiked) => !prevLiked);
+  };
+
+  const handleFavorite = () => {
+    setFavorited((prevFavorited) => !prevFavorited);
+  };
 
   const getIcon = (tag) => {
-    switch(tag) {
+    switch (tag) {
       case "Vegan":
         return <img src={veganImg} alt="Vegan" />;
       case "Gluten-Free":
-        return <img src={glutenImg} alt="Gluten-Free"/>;
+        return <img src={glutenImg} alt="Gluten-Free" />;
       case "Lactose-Free":
-        return <img src={lactoseImg} alt="Lactose-Free"/>;
-        case "Nut-Free":
-          return <img src={nutImg} alt="Lactose-Free"/>;
+        return <img src={lactoseImg} alt="Lactose-Free" />;
+      case "Nut-Free":
+        return <img src={nutImg} alt="Lactose-Free" />;
       default:
         return null;
     }
@@ -44,7 +53,7 @@ function RecipeCard(props) {
   const getRating = (rating) => {
     const maxStars = 5;
     const stars = [];
-  
+
     for (let i = 1; i <= maxStars; i++) {
       if (i <= rating) {
         stars.push(<img key={i} src={star1Img} alt="full star" />);
@@ -52,37 +61,49 @@ function RecipeCard(props) {
         stars.push(<img key={i} src={star0Img} alt="empty star" />);
       }
     }
-  
-    return <div className="star-rating">{stars}</div>; // Devuelve un contenedor con las estrellas
+    return <div className="star-rating">{stars}</div>;
   };
 
-  
-  console.log(props.handleDelete)
- {/*Tener en cuenta el traer sólo las propiedades que necesitamos  -en lugar de pasarle como parámetro props-*/}
+  console.log("Rating recibido:", props.eachRecipe.rating);
+  {
+    /*Tener en cuenta el traer sólo las propiedades que necesitamos  -en lugar de pasarle como parámetro props-*/
+  }
   return (
     <div>
-       <div className="card" key={props.id}>
-
-        <section className="topIcons">
-          <div className="fav">
-
-          </div>
-          <div className="rating">
-          {getRating(props.recipeRating)} 
-          </div>
-        </section>
-
+      <div className="card" key={props.eachRecipe.id}>
         <section className="cardImg">
-          <img className="recipeImg" src={props.eachRecipe.image} alt="" />
+          <img
+            className="recipeImg"
+            src={props.eachRecipe.image}
+            alt={props.eachRecipe.name}
+          />
+
+          <div className="topIcons">
+            <div className="fav">
+              <div onClick={handleFavorite}>
+                <img title="favorite" src={favorited ? heart1Img : heart0Img} alt="Favorite" />
+              </div>
+              <div onClick={handleLike}>
+                <img title="like" src={liked ? thumbsUp1Img : thumbsUp0Img} alt="Like" />
+              </div>
+            </div>
+            <div className="rating">
+              {getRating(props.eachRecipe.rating)}{" "}
+            </div>
+          </div>
         </section>
-        
+
         <section className="cardHeader">
-          <Link className="recipeLink" to={`/recipes/${props.eachRecipe.name}`} element={< RecipeDetails />}>
+          <Link
+            className="recipeLink"
+            to={`/recipes/${props.eachRecipe.name}`}
+            element={<RecipeDetails />}
+          >
             <h4>{props.eachRecipe.name}</h4>
           </Link>
-          <p>{props.eachRecipe.instructions[0].slice(0,40)}..</p>
+          <p>{props.eachRecipe.instructions[0].slice(0, 40)}..</p>
         </section>
-        
+
         <section className="cardResume">
           <div className="iconProperty">
             <img src={timeImg} alt="time" />
@@ -106,38 +127,49 @@ function RecipeCard(props) {
         </section>
 
         <section className="cardSimpleTags">
-            <p>{props.eachRecipe.mealType}</p>{/*aquí si hay varias debería mostrarlas*/}
-            <p>{props.eachRecipe.cuisine}</p>
+          <p>{props.eachRecipe.mealType}</p>
+          {/*aquí si hay varias debería mostrarlas*/}
+          <p>{props.eachRecipe.cuisine}</p>
         </section>
 
         <section className="cardTags">
           {props.eachRecipe.tags.map((tag, index) => (
             <div key={index} className="tag">
               {getIcon(tag)}
-              {tag} 
-             </div>
-           ))}
+              {tag}
+            </div>
+          ))}
         </section>
 
-        <hr/>
+        <hr />
 
         <section className="cardActions">
-        <button className="deleteBtn" onClick={() => props.handleDelete(props.index)}>
-        <img  src={deleteImg} alt="delete" />
-        </button>
+        <div className="leftActions">
+          
+        <button
+            className="deleteBtn"
+            onClick={() => props.handleDelete(props.index)}
+          >
+            <img title="delete" src={deleteImg} alt="delete" />
+          </button>
+          <img title="edit" id="edit" src={editImg} alt="" />
+        </div>
 
-        <Link className="openBtn" to={`/recipes/${props.eachRecipe.name}`} element={< RecipeDetails />}>
-          <img  src={openImg} alt="open" />
+          
+          <Link
+            className="openBtn"
+            to={`/recipes/${props.eachRecipe.name}`}
+            element={<RecipeDetails />}
+          >
+            <img title="open" src={openImg} alt="open" />
           </Link>
         </section>
+      </div>
 
-       </div>
-       
-        {/* <p>Did you liked it? {props.eachRecipe.liked ? (<img src={thumbUp}/>) : (<img src ={thumbDown}/>)}</p> */}
-        {/* <hr style={{ width: "80%", display:"flex", Align:"center"}} /> */}
+      {/* <p>Did you liked it? {props.eachRecipe.liked ? (<img src={thumbUp}/>) : (<img src ={thumbDown}/>)}</p> */}
+      {/* <hr style={{ width: "80%", display:"flex", Align:"center"}} /> */}
     </div>
-
-  )
+  );
 }
 
-export default RecipeCard
+export default RecipeCard;

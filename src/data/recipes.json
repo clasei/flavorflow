@@ -25,8 +25,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe1.webp",
-    "rating": 4.5,
+    "rating": 4,
     "liked": false,
+    "favorite": false,
     "mealType": "Dinner"
   },
   {
@@ -59,8 +60,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe2.webp",
-    "rating": 4.3,
+    "rating": 4,
     "liked": true,
+    "favorite": true,
     "mealType": "Dinner"
   },
   {
@@ -90,8 +92,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe3.webp",
-    "rating": 4.8,
+    "rating": 3,
     "liked": true,
+    "favorite": false,
     "mealType": "Dinner"
   },
   {
@@ -122,8 +125,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe4.webp",
-    "rating": 4.4,
+    "rating": 4,
     "liked": true,
+    "favorite": false,
     "mealType": "Lunch"
   },
   {
@@ -155,8 +159,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe5.webp",
-    "rating": 4.6,
+    "rating": 3,
     "liked": true,
+    "favorite": true,
     "mealType": "Dinner"
   },
   {
@@ -186,8 +191,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe6.webp",
-    "rating": 4.7,
+    "rating": 4,
     "liked": true,
+    "favorite": false,
     "mealType": "Dinner"
   },
   {
@@ -216,8 +222,9 @@
       "Gluten-Free"
     ],
     "image": "src/assets/images/recipe7.webp",
-    "rating": 4.9,
+    "rating": 5,
     "liked": true,
+    "favorite": true,
     "mealType": "Breakfast"
   },
   {
@@ -250,8 +257,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe8.webp",
-    "rating": 4.2,
+    "rating": 3,
     "liked": true,
+    "favorite": false,
     "mealType": "Lunch"
   },
   {
@@ -280,8 +288,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe9.webp",
-    "rating": 4.8,
+    "rating": 5,
     "liked": true,
+    "favorite": false,
     "mealType": "Breakfast"
   },
   {
@@ -311,8 +320,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe10.webp",
-    "rating": 4.5,
+    "rating": 4,
     "liked": true,
+    "favorite": true,
     "mealType": "Dinner"
   },
   {
@@ -342,8 +352,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe11.webp",
-    "rating": 4.6,
+    "rating": 4,
     "liked": true,
+    "favorite": false,
     "mealType": "Dinner"
   },
   {
@@ -373,8 +384,9 @@
       "Nut-Free"
     ],
     "image": "src/assets/images/recipe12.webp",
-    "rating": 4.9,
+    "rating": 5,
     "liked": true,
+    "favorite": true,
     "mealType": "Snack"
   }
 ]

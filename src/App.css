@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 #root {
   margin: 0 auto;
@@ -11,18 +11,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-primary500: #727F68; 
-  --color-primary400: #BFC6BA;
+  --color-primary500: #727f68;
+  --color-primary400: #bfc6ba;
   --color-primary300: #899482;
-  --color-primary200: #E5E8E3;
-  --color-secundary500: #33382E;
+  --color-primary200: #e5e8e3;
+  --color-secundary500: #33382e;
   --color-accent400: #fbc77b;
-  --color-accent500: #F9AF42;
+  --color-accent500: #f9af42;
   --color-accent600: #e08a08;
-  --color-neutral500: #FEFDFA;
-  --color-neutral600: #DFDECE;
+  --color-neutral500: #fefdfa;
+  --color-neutral600: #dfdece;
 
-  --font-text: 'Roboto', sans-serif;
+  --font-text: "Roboto", sans-serif;
 }
 
 * {
@@ -31,21 +31,21 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   max-height: 100vh;
   font-family: var(--font-text);
 }
 
-#mainPage{
+#mainPage {
   display: flex;
   flex-direction: row;
   height: 100vh;
 }
 
-.mainContainer{
-  flex-grow: 1; 
-  height: 100vh; 
-  overflow-y: auto; 
+.mainContainer {
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 /* Sidebar container----------------------------------------------------------*/
@@ -53,34 +53,39 @@ body{
 .sidebar {
   height: 100vh;
   width: 328px;
-  display: flex; 
+  display: flex;
   color: var(--color-neutral500);
   overflow: hidden;
   flex-shrink: 0;
   font-weight: 500;
 }
 
-
 /*Sidebar icons--------------------------------------------------------------*/
 
 .sidebarIcons {
-  width: 64px; 
-  background-color: var(--color-secundary500); 
+  width: 64px;
+  background-color: var(--color-secundary500);
 }
 
-.sidebarLinksXs, .sidebarProfileXs, .sidebarCategoriesXs, .sidebarFavXs{
+.sidebarLinksXs,
+.sidebarProfileXs,
+.sidebarCategoriesXs,
+.sidebarFavXs {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.logoImg{
+.logoImg {
   width: 65%;
   display: flex;
   justify-content: center;
 }
 
-.sidebarLinksXs img, .sidebarCategoriesXs img, .sidebarFavXs img, .sidebarFooterXs img {
+.sidebarLinksXs img,
+.sidebarCategoriesXs img,
+.sidebarFavXs img,
+.sidebarFooterXs img {
   width: 20px;
 }
 
@@ -91,12 +96,12 @@ body{
   border-top: 0.2px solid var(--color-primary400);
 }
 
-.buttonSmall{
+.buttonSmall {
   width: 65%;
   height: 40px;
   border-radius: 5px;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 14px;
   background-color: var(--color-accent500);
   color: var(--color-secundary500);
@@ -107,16 +112,17 @@ body{
   gap: 8px;
 }
 
-.buttonSmall:hover,.buttonLarge:hover, #buttonDashboard:hover {
+.buttonSmall:hover,
+.buttonLarge:hover,
+#buttonDashboard:hover {
   background-color: var(--color-accent600);
   transition: 0.5s;
 }
 
-
 /* Sidebar text-----------------------------------------------------------------*/
 
 .sidebarText {
-  width: 264px; 
+  width: 264px;
   background-color: var(--color-primary500);
   padding-left: 10%;
 }
@@ -125,8 +131,6 @@ body{
   padding: 16px 0px;
 }
 
-
-
 .sidebarText hr {
   width: 80%;
   margin: 0;
@@ -134,15 +138,16 @@ body{
   border-top: 0.2px solid var(--color-primary400);
 }
 
-
-
-.sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFav{
+.sidebarLinks,
+.sidebarProfile,
+.sidebarCategories,
+.sidebarFav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.sidebarProfile{
+.sidebarProfile {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -150,18 +155,18 @@ body{
   align-items: center;
 }
 
-.profileImg{
+.profileImg {
   width: 40px;
   border: 3px solid var(--color-accent500);
   border-radius: 500px;
 }
 
-.sidebar a{
+.sidebar a {
   color: var(--color-neutral500);
   text-decoration: none;
 }
 
-.sidebar a:hover { 
+.sidebar a:hover {
   color: var(--color-secundary500);
   transition: 0.25s;
 }
@@ -171,7 +176,7 @@ body{
   height: 40px;
   border-radius: 5px;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 14px;
   background-color: var(--color-accent500);
   color: var(--color-secundary500);
@@ -183,7 +188,7 @@ body{
   color: var(--color-secundary500);
 }
 
-.buttonLarge p{
+.buttonLarge p {
   color: var(--color-secundary500);
 }
 
@@ -191,7 +196,7 @@ body{
   width: 14px;
 }
 
-.smallHeader{
+.smallHeader {
   font-size: 12px;
   font-weight: 500;
   color: var(--color-secundary500);
@@ -199,11 +204,13 @@ body{
 
 /* Side by side sidebars css------------------------------------------------ */
 
-.sidebarProfile, .sidebarProfileXs{
+.sidebarProfile,
+.sidebarProfileXs {
   height: 64px;
 }
 
-.sidebarLinks, .sidebarLinksXs {
+.sidebarLinks,
+.sidebarLinksXs {
   height: 112px;
 }
 
@@ -214,10 +221,11 @@ body{
 
 .sidebarLinksXs {
   margin-top: 4px;
-  gap: 26PX;
+  gap: 26px;
 }
 
-.sidebarCategories, .sidebarCategoriesXs {
+.sidebarCategories,
+.sidebarCategoriesXs {
   height: 300px;
 }
 
@@ -229,11 +237,12 @@ body{
 
 .sidebarCategoriesXs {
   margin-top: 51px;
-  gap: 24PX;
+  gap: 24px;
   margin-bottom: -32px;
 }
 
-.sidebarFav, .sidebarFavXs {
+.sidebarFav,
+.sidebarFavXs {
   height: 200px;
 }
 
@@ -244,15 +253,16 @@ body{
 
 .sidebarFavXs {
   margin-top: 38px;
-  gap: 24PX;
+  gap: 24px;
 }
 
-.sidebarFooter, .sidebarFooterXs {
+.sidebarFooter,
+.sidebarFooterXs {
   height: 20%;
   display: flex;
 }
 
-.sidebarFooterXs{
+.sidebarFooterXs {
   flex-direction: column;
   align-items: center;
 }
@@ -262,7 +272,7 @@ body{
   height: 40px;
   border-radius: 5px;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 14px;
   background-color: var(--color-accent500);
   color: var(--color-secundary500);
@@ -280,12 +290,12 @@ body{
   z-index: 10;
 }
 
-#buttonDashboard a{
+#buttonDashboard a {
   text-decoration: none;
 }
 
 /*Card----------------------------------------------------------------------------*/
-.card{
+.card {
   width: 416px;
   height: 492px;
   border-radius: 15px;
@@ -301,16 +311,20 @@ body{
   gap: 4px;
 }
 
-.cardHeader p{
+.cardHeader p {
   text-align: left;
   margin-bottom: -8px;
 }
 
 .cardImg {
-  position: relative; 
+  position: relative;
   width: 416px;
   height: 200px;
-  overflow: hidden; 
+  overflow: hidden;
+
+  display: flex; /* Flexbox para alinear los íconos sobre la imagen */
+  align-items: flex-start; /* Alinea los íconos en la parte superior */
+  justify-content: flex-end;
 }
 
 .cardImg::before {
@@ -320,38 +334,42 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(25,28,23, 1) 5%, rgba(0, 128, 0, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 28, 23, 1) 5%,
+    rgba(0, 128, 0, 0) 100%
+  );
   z-index: 1;
-  border-radius: 15px 15px 0px 0px; 
-  pointer-events: none; 
+  border-radius: 15px 15px 0px 0px;
+  pointer-events: none;
 }
-
 
 .recipeImg {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   border-radius: 15px 15px 0px 0px;
-  object-fit: cover; 
-  position: relative;
-  z-index: 0; 
+  object-fit: cover;
+  z-index: 0;
 }
-
 
 .topIcons {
-  position: absolute; 
-  top: 10px;         
-  right: 10px;    
-  z-index: 1000;         
-  display: flex;      
-  gap: 8px;          
+  position: absolute;
+  top: 10px;
+  left: 10px; /* Mantén esto para que el contenedor se posicione a la izquierda */
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* Permite espacio entre los elementos */
+  width: calc(90% - 20px); /* Asegura que ocupe todo el ancho disponible */
+  margin: 16px 5%;
 }
 
-.topIcons img {
-
+.fav {
+  display: flex; /* Asegura que los íconos de favorito y like estén en línea */
+  gap: 16px; /* Espacio entre los íconos de favorito y like */
 }
 
-.rating{
-
+.rating {
+  margin-left: auto; /* Empuja el rating a la derecha */
 }
 
 .cardResume {
@@ -363,35 +381,34 @@ body{
   color: var(--color-primary500);
 }
 
-.cardSimpleTags, .cardTags {
+.cardSimpleTags,
+.cardTags {
   display: flex;
   height: 32px;
   margin: 4px 5%;
 }
 
-.cardSimpleTags p{
+.cardSimpleTags p {
   background-color: var(--color-accent500);
   padding: 4px 8px;
-
 }
 
-.cardTags p{
-background-color: var(--color-primary500);
-gap: 16px;
-padding: 4px 8px;
+.cardTags p {
+  background-color: var(--color-primary500);
+  gap: 16px;
+  padding: 4px 8px;
 }
 
-#eachCardOnList{
+#eachCardOnList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 32px;
   justify-content: flex-start;
   margin: 96px 10%;
-  
 }
 
-.mainBar{
+.mainBar {
   background-color: var(--color-neutral600);
   margin: 0;
   padding: 0;
@@ -404,12 +421,13 @@ padding: 4px 8px;
   z-index: 100;
 }
 
-.cardResume img, .cardTags img {
+.cardResume img,
+.cardTags img {
   width: 16px;
   height: 16px;
 }
 
-.cardTags{
+.cardTags {
   gap: 8px;
 }
 
@@ -424,7 +442,7 @@ padding: 4px 8px;
   border-radius: 3px;
 }
 
-.cardSimpleTags{
+.cardSimpleTags {
   gap: 8px;
 }
 
@@ -442,7 +460,7 @@ padding: 4px 8px;
   display: flex;
 }
 
-.iconProperty{
+.iconProperty {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -454,32 +472,36 @@ padding: 4px 8px;
   color: var(--color-primary400);
 }
 
-.deleteBtn, .openBtn {
+.deleteBtn,
+.openBtn {
   cursor: pointer;
-  background: none;  
-  border: none;      
-  padding: 0;       
-  width: auto;     
-  height: auto;    
-  display: inline-flex;  
-  align-items: center;   
-  justify-content: center; 
-  outline: none;    
+  background: none;
+  border: none;
+  padding: 0;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
 }
 
-.deleteBtn img, .openBtn img, .topIcons img{
+.deleteBtn img,
+.openBtn img,
+.topIcons img,
+#edit
+{
   width: 20px;
   height: 20px;
 }
 
 
-.deleteBtn img:hover, .openBtn img:hover, .fav img:hover {
-  width: 22px;      
-  height: 22px; 
-  transition: 0.2s;    
+.deleteBtn img:hover,
+.openBtn img:hover,
+.fav img:hover,
+#edit:hover {
+  cursor: pointer;
 }
-
-
 
 .recipeLink {
   text-decoration: none;
@@ -492,9 +514,14 @@ padding: 4px 8px;
   border-top: 0.2px solid var(--color-primary400);
 }
 
-.cardActions{
+.cardActions {
   display: flex;
   justify-content: space-between;
   margin: 0px 5%;
 }
 
+.leftActions{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
