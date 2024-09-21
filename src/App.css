@@ -12,9 +12,11 @@
   -moz-osx-font-smoothing: grayscale;
 
   --color-primary500: #727F68; 
-  --color-primary400: #899482;
+  --color-primary400: #BFC6BA;
+  --color-primary300: #899482;
   --color-primary200: #E5E8E3;
   --color-secundary500: #33382E;
+  --color-accent400: #fbc77b;
   --color-accent500: #F9AF42;
   --color-accent600: #e08a08;
   --color-neutral500: #FEFDFA;
@@ -284,8 +286,8 @@ body{
 
 /*Card----------------------------------------------------------------------------*/
 .card{
-  width: 400px;
-  height: 400px;
+  width: 416px;
+  height: 512px;
   border-radius: 15px;
   background-color: var(--color-primary200);
 }
@@ -299,7 +301,7 @@ body{
 
 .cardImg {
   position: relative; 
-  width: 400px;
+  width: 416px;
   height: 200px;
   overflow: hidden; 
 }
@@ -358,7 +360,7 @@ padding: 4px 8px;
   flex-wrap: wrap;
   gap: 32px;
   justify-content: flex-start;
-  margin: 96px 40px;
+  margin: 96px 10%;
   
 }
 
@@ -373,4 +375,82 @@ padding: 4px 8px;
   position: fixed;
   width: 100%;
   z-index: 100;
+}
+
+.cardResume img, .cardTags img {
+  width: 16px;
+  height: 16px;
+}
+
+.cardTags{
+  gap: 8px;
+}
+
+.tag {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary400);
+  padding: 2px 8px;
+  height: 26px;
+  border-radius: 3px;
+}
+
+.cardSimpleTags{
+  gap: 8px;
+}
+
+.cardSimpleTags p {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-accent400);
+  padding: 2px 8px;
+  height: 26px;
+  border-radius: 3px;
+}
+
+.cardResume img {
+  display: flex;
+}
+
+.iconProperty{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardResume span {
+  font-weight: 100;
+  color: var(--color-primary400);
+}
+
+.deleteBtn, .openBtn {
+  cursor: pointer;
+  background: none;  
+  border: none;      
+  padding: 0;       
+  width: auto;     
+  height: auto;    
+  display: inline-flex;  
+  align-items: center;   
+  justify-content: center; 
+  outline: none;    
+}
+
+.deleteBtn img, .openBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+.deleteBtn img:hover, .openBtn img:hover {
+  width: 22px;      
+  height: 22px;     
+}
+
+.recipeLink {
+  text-decoration: none;
+  color: var(--color-secundary500);
 }

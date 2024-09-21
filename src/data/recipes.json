@@ -21,7 +21,9 @@
     "difficulty": "Medium",
     "cuisine": "Mediterranean",
     "caloriesPerServing": 220,
-    "tags": [],
+    "tags": [
+      "Nut-Free"
+    ],
     "image": "src/assets/images/recipe1.webp",
     "rating": 4.5,
     "liked": false,
@@ -53,7 +55,8 @@
     "caloriesPerServing": 180,
     "tags": [
       "Vegan",
-      "Gluten-Free"
+      "Gluten-Free",
+      "Nut-Free"
     ],
     "image": "src/assets/images/recipe2.webp",
     "rating": 4.3,
@@ -83,7 +86,9 @@
     "difficulty": "Medium",
     "cuisine": "Italian",
     "caloriesPerServing": 600,
-    "tags": [],
+    "tags": [
+      "Nut-Free"
+    ],
     "image": "src/assets/images/recipe3.webp",
     "rating": 4.8,
     "liked": true,
@@ -113,7 +118,8 @@
     "cuisine": "Mediterranean",
     "caloriesPerServing": 350,
     "tags": [
-      "Gluten-Free"
+      "Gluten-Free",
+      "Nut-Free"
     ],
     "image": "src/assets/images/recipe4.webp",
     "rating": 4.4,
@@ -145,7 +151,8 @@
     "cuisine": "Italian",
     "caloriesPerServing": 500,
     "tags": [
-      "Gluten-Free"
+      "Gluten-Free",
+      "Nut-Free"
     ],
     "image": "src/assets/images/recipe5.webp",
     "rating": 4.6,
@@ -175,7 +182,9 @@
     "difficulty": "Easy",
     "cuisine": "Mexican",
     "caloriesPerServing": 450,
-    "tags": [],
+    "tags": [
+      "Nut-Free"
+    ],
     "image": "src/assets/images/recipe6.webp",
     "rating": 4.7,
     "liked": true,
@@ -237,7 +246,8 @@
     "caloriesPerServing": 280,
     "tags": [
       "Vegan",
-      "Gluten-Free"
+      "Gluten-Free",
+      "Nut-Free"
     ],
     "image": "src/assets/images/recipe8.webp",
     "rating": 4.2,
@@ -266,7 +276,9 @@
     "difficulty": "Easy",
     "cuisine": "American",
     "caloriesPerServing": 300,
-    "tags": [],
+    "tags": [
+      "Nut-Free"
+    ],
     "image": "src/assets/images/recipe9.webp",
     "rating": 4.8,
     "liked": true,
@@ -295,7 +307,9 @@
     "difficulty": "Medium",
     "cuisine": "Thai",
     "caloriesPerServing": 450,
-    "tags": [],
+    "tags": [
+      "Nut-Free"
+    ],
     "image": "src/assets/images/recipe10.webp",
     "rating": 4.5,
     "liked": true,
@@ -324,7 +338,8 @@
     "cuisine": "American",
     "caloriesPerServing": 350,
     "tags": [
-      "Gluten-Free"
+      "Gluten-Free",
+      "Nut-Free"
     ],
     "image": "src/assets/images/recipe11.webp",
     "rating": 4.6,
@@ -354,10 +369,12 @@
     "difficulty": "Easy",
     "cuisine": "Dessert",
     "caloriesPerServing": 300,
-    "tags": [],
+    "tags": [
+      "Nut-Free"
+    ],
     "image": "src/assets/images/recipe12.webp",
     "rating": 4.9,
     "liked": true,
-    "mealType": "Snak"
+    "mealType": "Snack"
   }
 ]

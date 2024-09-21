@@ -4,9 +4,18 @@ import Recipes from "../data/recipes.json"
 import thumbUp from "../assets/icons/thumb_up.svg"
 import thumbDown from "../assets/icons/thumb_down.svg"
 import RecipeDetails from "../pages/RecipeDetails.jsx"
+
 import veganImg from "../assets/icons/vegan.svg";
 import lactoseImg from "../assets/icons/lactose.svg";
 import glutenImg from "../assets/icons/gluten.svg";
+import nutImg from "../assets/icons/nut.png";
+
+import timeImg from "../assets/icons/time.svg";
+import difficultyImg from "../assets/icons/difficulty.svg";
+import servingsImg from "../assets/icons/servings.svg";
+import caloriesImg from "../assets/icons/calories.svg";
+import deleteImg from "../assets/icons/delete.svg";
+import openImg from "../assets/icons/open.svg";
 
 
 function RecipeCard(props) {
@@ -14,11 +23,13 @@ function RecipeCard(props) {
   const getIcon = (tag) => {
     switch(tag) {
       case "Vegan":
-        return <img src={veganImg} alt="Vegan" style={{ width: '20px', height: '20px' }} />;
+        return <img src={veganImg} alt="Vegan" />;
       case "Gluten-Free":
-        return <img src={glutenImg} alt="Gluten-Free" style={{ width: '20px', height: '20px' }} />;
+        return <img src={glutenImg} alt="Gluten-Free"/>;
       case "Lactose-Free":
-        return <img src={lactoseImg} alt="Lactose-Free" style={{ width: '20px', height: '20px' }} />;
+        return <img src={lactoseImg} alt="Lactose-Free"/>;
+        case "Nut-Free":
+          return <img src={nutImg} alt="Lactose-Free"/>;
       default:
         return null;
     }
@@ -36,23 +47,30 @@ function RecipeCard(props) {
         </section>
         
         <section className="cardHeader">
-          <Link to={`/recipes/${props.eachRecipe.name}`} element={< RecipeDetails />}>
+          <Link className="recipeLink" to={`/recipes/${props.eachRecipe.name}`} element={< RecipeDetails />}>
             <h4>{props.eachRecipe.name}</h4>
           </Link>
-          <p>{props.eachRecipe.instructions[0].slice(0,200)}..</p>
+          <p>{props.eachRecipe.instructions[0].slice(0,50)}..</p>
         </section>
         
         <section className="cardResume">
           <div className="iconProperty">
+            <img src={timeImg} alt="time" />
             <p>{props.eachRecipe.cookingTimeMinutes} min</p>
           </div>
+          <span>|</span>
           <div className="iconProperty">
+            <img src={difficultyImg} alt="difficulty" />
             <p>{props.eachRecipe.difficulty}</p>
           </div>
+          <span>|</span>
           <div className="iconProperty">
+            <img src={servingsImg} alt="servings" />
             <p>{props.eachRecipe.servings} servings</p>
           </div>
+          <span>|</span>
           <div className="iconProperty">
+            <img src={caloriesImg} alt="calories" />
             <p>{props.eachRecipe.caloriesPerServing} cal.</p>
           </div>
         </section>
@@ -64,16 +82,26 @@ function RecipeCard(props) {
 
         <section className="cardTags">
           {props.eachRecipe.tags.map((tag, index) => (
-            <span key={index} className="tag">
+            <div key={index} className="tag">
               {getIcon(tag)}
               {tag} 
-             </span>
+             </div>
            ))}
         </section>
 
-        <p>Did you liked it? {props.eachRecipe.liked ? (<img src={thumbUp}/>) : (<img src ={thumbDown}/>)}</p>
+        {/* <p>Did you liked it? {props.eachRecipe.liked ? (<img src={thumbUp}/>) : (<img src ={thumbDown}/>)}</p> */}
+        {/* <hr style={{ width: "80%", display:"flex", Align:"center"}} /> */}
+        <hr/>
 
-        <button onClick={() => props.handleDelete(props.index)} style={{backgroundColor:"darkred"}}>Borrar</button>
+        <section className="cardActions">
+        <button className="deleteBtn" onClick={() => props.handleDelete(props.index)}>
+        <img  src={deleteImg} alt="delete" />
+        </button>
+
+        <Link className="openBtn" to={`/recipes/${props.eachRecipe.name}`} element={< RecipeDetails />}>
+          <img  src={openImg} alt="open" />
+          </Link>
+        </section>
 
        </div>
        
