@@ -16,6 +16,7 @@ import snackImg from "../assets/icons/snack.svg";
 import heartImg from "../assets/icons/heart.svg";
 import thumbsUpImg from "../assets/icons/thumbsUp.svg";
 import githubImg from "../assets/icons/github.svg";
+import addImg from "../assets/icons/add.svg";
 
 function Sidebar() {
   return (
@@ -24,7 +25,7 @@ function Sidebar() {
         <section className="sidebarProfileXs">
           <img className="logoImg" src={logoImg} alt="" />
         </section>
-        <hr />
+     
         <section className="sidebarLinksXs">
           <img src={homeImg} alt="home" />
           <img src={cardImg} alt="about us" />
@@ -53,10 +54,10 @@ function Sidebar() {
       <div className="sidebarText">
         <section className="sidebarProfile">
           <img className="profileImg" src={profileImg} alt="" />
-          <h2>Lira</h2>
+          <p>Lira</p>
         </section>
 
-        <hr />
+     
 
         <section className="sidebarLinks">
           <Link to="/" element={<Dashboard />}>
@@ -84,9 +85,14 @@ function Sidebar() {
           <p className="smallHeader">Featured</p>
           <p>Favorites</p>
           <p>Liked</p>
+          <button>
+            <img id="buttonLargeAddImg" src={addImg} alt="" />
+            Add recipe</button>
         </section>
 
         <hr />
+
+  
 
         <section className="sidebarFooter">
           <a id="githubLink" href="https://github.com/clasei/flavorflow">

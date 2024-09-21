@@ -15,6 +15,7 @@
   --color-primary400: #899482;
   --color-secundary500: #33382E;
   --color-accent500: #F9AF42;
+  --color-accent600: #e08a08;
   --color-neutral500: #FEFDFA;
 
   --font-text: 'Roboto', sans-serif;
@@ -94,13 +95,9 @@ body{
 }
 
 
-
-
-
 /*Sidebar icons*/
 
 .sidebarIcons {
-  padding-top: 32px;
   width: 64px; 
   background-color: var(--color-secundary500); 
 }
@@ -109,11 +106,13 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 16px 0px;
+  gap: 24PX;
 }
 
 .logoImg{
   width: 65%;
+  display: flex;
+  justify-content: center;
 }
 
 .sidebarLinksXs img, .sidebarCategoriesXs img, .sidebarFavXs img, .sidebarFooterXs img {
@@ -130,14 +129,13 @@ body{
 /* Sidebar text*/
 
 .sidebarText {
-  padding-top: 32px;
   width: 264px; 
   background-color: var(--color-primary500);
   padding-left: 10%;
 }
 
 .sidebar section {
-  margin: 16px 0px;
+  padding: 16px 0px;
 }
 
 .sidebarText hr {
@@ -156,10 +154,64 @@ body{
 .sidebarProfile{
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 16px;
+  font-size: 16px;
+  align-items: center;
 }
 
 .profileImg{
-  width: 32px;
+  width: 40px;
 }
 
+a{
+  color: var(--color-neutral500);
+  text-decoration: none;
+}
+
+a:hover { 
+  color: var(--color-secundary500);
+  transition: 0.25s;
+}
+
+.sidebarText button {
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; 
+  font-size: 14px;
+  background-color: var(--color-accent500);
+  color: var(--color-secundary500);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebarText button:hover {
+  background-color: var(--color-accent600);
+  transition: 0.5s;
+}
+
+#buttonLargeAddImg {
+  width: 14px;
+}
+
+/* Side by side sidebars css */
+
+.sidebarProfile, .sidebarProfileXs{
+  height: 64px;
+}
+
+.sidebarLinks, .sidebarLinksXs {
+
+}
+
+.sidebarLinks {
+  
+}
+
+.sidebarLinksXs {
+
+}
