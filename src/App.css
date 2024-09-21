@@ -44,9 +44,7 @@ body{
   flex-grow: 1; 
   height: 100vh; 
   overflow-y: auto; 
-  background-color: var(--color-neutral500); 
 }
-
 
 /* Sidebar container----------------------------------------------------------*/
 
@@ -359,8 +357,8 @@ padding: 4px 8px;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 32px;
-  justify-content: center;
-  margin: 32px 0px;
+  justify-content: flex-start;
+  margin: 40px;
 }
 
 .mainBar{

@@ -22,7 +22,7 @@
     "cuisine": "Mediterranean",
     "caloriesPerServing": 220,
     "tags": [],
-    "image": "src/assets/recipesImg/high-view-delicious-salad-brown-plate.jpg",
+    "image": "src/assets/images/recipe1.webp",
     "rating": 4.5,
     "liked": false,
     "mealType": "Dinner"
@@ -55,7 +55,7 @@
       "Vegan",
       "Gluten-Free"
     ],
-    "image": "https://example.com/veggie-stir-fry-tofu.jpg",
+    "image": "src/assets/images/recipe2.webp",
     "rating": 4.3,
     "liked": true,
     "mealType": "Dinner"
@@ -84,7 +84,7 @@
     "cuisine": "Italian",
     "caloriesPerServing": 600,
     "tags": [],
-    "image": "https://example.com/spaghetti-carbonara.jpg",
+    "image": "src/assets/images/recipe3.webp",
     "rating": 4.8,
     "liked": true,
     "mealType": "Dinner"
@@ -115,7 +115,7 @@
     "tags": [
       "Gluten-Free"
     ],
-    "image": "https://example.com/quinoa-avocado-salad.jpg",
+    "image": "src/assets/images/recipe4.webp",
     "rating": 4.4,
     "liked": true,
     "mealType": "Lunch"
@@ -147,7 +147,7 @@
     "tags": [
       "Gluten-Free"
     ],
-    "image": "https://example.com/mushroom-risotto.jpg",
+    "image": "src/assets/images/recipe5.webp",
     "rating": 4.6,
     "liked": true,
     "mealType": "Dinner"
@@ -176,7 +176,7 @@
     "cuisine": "Mexican",
     "caloriesPerServing": 450,
     "tags": [],
-    "image": "https://example.com/beef-tacos.jpg",
+    "image": "src/assets/images/recipe6.webp",
     "rating": 4.7,
     "liked": true,
     "mealType": "Dinner"
@@ -206,7 +206,7 @@
       "Vegan",
       "Gluten-Free"
     ],
-    "image": "https://example.com/berry-smoothie-bowl.jpg",
+    "image": "src/assets/images/recipe7.webp",
     "rating": 4.9,
     "liked": true,
     "mealType": "Breakfast"
@@ -239,7 +239,7 @@
       "Vegan",
       "Gluten-Free"
     ],
-    "image": "https://example.com/lentil-soup.jpg",
+    "image": "src/assets/images/recipe8.webp",
     "rating": 4.2,
     "liked": true,
     "mealType": "Lunch"
@@ -267,7 +267,7 @@
     "cuisine": "American",
     "caloriesPerServing": 300,
     "tags": [],
-    "image": "https://example.com/banana-pancakes.jpg",
+    "image": "src/assets/images/recipe9.webp",
     "rating": 4.8,
     "liked": true,
     "mealType": "Breakfast"
@@ -296,7 +296,7 @@
     "cuisine": "Thai",
     "caloriesPerServing": 450,
     "tags": [],
-    "image": "https://example.com/thai-green-curry.jpg",
+    "image": "src/assets/images/recipe10.webp",
     "rating": 4.5,
     "liked": true,
     "mealType": "Dinner"
@@ -326,7 +326,7 @@
     "tags": [
       "Gluten-Free"
     ],
-    "image": "https://example.com/baked-salmon.jpg",
+    "image": "src/assets/images/recipe11.webp",
     "rating": 4.6,
     "liked": true,
     "mealType": "Dinner"
@@ -355,7 +355,7 @@
     "cuisine": "Dessert",
     "caloriesPerServing": 300,
     "tags": [],
-    "image": "https://example.com/chocolate-mug-cake.jpg",
+    "image": "src/assets/images/recipe12.webp",
     "rating": 4.9,
     "liked": true,
     "mealType": "Snak"
