@@ -43,9 +43,9 @@ function Sidebar() {
         <section className="sidebarFavXs">
           <img src={heartImg} alt="favorite" />
           <img src={thumbsUpImg} alt="liked" />
-          <button>
+          <Link className="buttonSmall" to="/AddRecipe">
             <img id="buttonLargeAddImg" src={addImg} alt="" />
-          </button>
+          </Link>
         </section>
 
         <hr />
@@ -88,9 +88,10 @@ function Sidebar() {
           <p className="smallHeader">Featured</p>
           <p>Favorites</p>
           <p>Liked</p>
-          <button>
+          <Link className="buttonLarge" to="/AddRecipe">
             <img id="buttonLargeAddImg" src={addImg} alt="" />
-            Add recipe</button>
+            <p>Add recipe</p>
+          </Link>
         </section>
 
         <hr />
@@ -104,14 +105,6 @@ function Sidebar() {
         </section>
       </div>
     </div>
-    // <div id="sidebar">
-    //   <Navbar />
-    //   <section id="sidebarLinks">
-    //     <Link to="/" element={<Dashboard/>}>Home</Link>
-    //     <Link to="/About" element={<About />}>About Us</Link>
-    //   </section>
-    //   <Footer />
-    // </div>
   );
 }
 
