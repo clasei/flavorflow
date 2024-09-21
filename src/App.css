@@ -358,7 +358,8 @@ padding: 4px 8px;
   flex-wrap: wrap;
   gap: 32px;
   justify-content: flex-start;
-  margin: 40px;
+  margin: 96px 40px;
+  
 }
 
 .mainBar{
@@ -369,4 +370,7 @@ padding: 4px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }

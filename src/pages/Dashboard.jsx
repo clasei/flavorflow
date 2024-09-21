@@ -8,7 +8,7 @@ function Dashboard() {
       <div className="mainBar">
         <p>Home</p>
       </div>
-      <main>
+      <main id="conteinerRecipes">
         <RecipeList />
       </main>
       
