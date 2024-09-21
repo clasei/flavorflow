@@ -50,7 +50,7 @@ function RecipeCard(props) {
           <Link className="recipeLink" to={`/recipes/${props.eachRecipe.name}`} element={< RecipeDetails />}>
             <h4>{props.eachRecipe.name}</h4>
           </Link>
-          <p>{props.eachRecipe.instructions[0].slice(0,50)}..</p>
+          <p>{props.eachRecipe.instructions[0].slice(0,40)}..</p>
         </section>
         
         <section className="cardResume">
@@ -75,10 +75,10 @@ function RecipeCard(props) {
           </div>
         </section>
 
-        <div className="cardSimpleTags">
+        <section className="cardSimpleTags">
             <p>{props.eachRecipe.mealType}</p>{/*aquí si hay varias debería mostrarlas*/}
             <p>{props.eachRecipe.cuisine}</p>
-        </div>
+        </section>
 
         <section className="cardTags">
           {props.eachRecipe.tags.map((tag, index) => (
@@ -89,8 +89,6 @@ function RecipeCard(props) {
            ))}
         </section>
 
-        {/* <p>Did you liked it? {props.eachRecipe.liked ? (<img src={thumbUp}/>) : (<img src ={thumbDown}/>)}</p> */}
-        {/* <hr style={{ width: "80%", display:"flex", Align:"center"}} /> */}
         <hr/>
 
         <section className="cardActions">
@@ -105,6 +103,8 @@ function RecipeCard(props) {
 
        </div>
        
+        {/* <p>Did you liked it? {props.eachRecipe.liked ? (<img src={thumbUp}/>) : (<img src ={thumbDown}/>)}</p> */}
+        {/* <hr style={{ width: "80%", display:"flex", Align:"center"}} /> */}
     </div>
 
   )
