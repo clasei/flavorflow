@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 #root {
   margin: 0 auto;
   text-align: center;
@@ -14,6 +16,8 @@
   --color-secundary500: #33382E;
   --color-accent500: #F9AF42;
   --color-neutral500: #FEFDFA;
+
+  --font-text: 'Roboto', sans-serif;
 }
 
 * {
@@ -54,14 +58,15 @@
   width: 32px;
 }*/
 
+body{
+  max-height: 100vh;
+  font-family: var(--font-text);
+}
+
 #mainPage{
   display: flex;
   flex-direction: row;
   height: 100vh;
-}
-
-body{
-  max-height: 100vh;
 }
 
 .mainContainer{
@@ -76,6 +81,8 @@ body{
   width: 200px;
 } 
 
+/* Sidebar container*/
+
 .sidebar {
   height: 100vh;
   width: 336px;
@@ -83,34 +90,61 @@ body{
   color: var(--color-neutral500);
   overflow: hidden;
   flex-shrink: 0;
-
+  font-weight: 500;
 }
 
-.sidebar section {
-  margin-left: 10%;
+
+
+
+
+/*Sidebar icons*/
+
+.sidebarIcons {
+  padding-top: 32px;
+  width: 64px; 
+  background-color: var(--color-secundary500); 
 }
 
-.sidebar hr {
+.sidebarIcons section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 0px;
+}
+
+.logoImg{
+  width: 65%;
+}
+
+.sidebarLinksXs img, .sidebarCategoriesXs img, .sidebarFavXs img, .sidebarFooterXs img {
+  width: 20px;
+}
+
+.sidebarIcons hr {
   width: 80%;
   margin: 0 auto;
   border: 0;
   border-top: 0.2px solid var(--color-primary400);
 }
 
-.logoImg{
-  width: 60%;
-}
-
-.sidebarIcons {
-  padding-top: 32px;
-  width: 72px; 
-  background-color: var(--color-secundary500); 
-}
+/* Sidebar text*/
 
 .sidebarText {
   padding-top: 32px;
   width: 264px; 
   background-color: var(--color-primary500);
+  padding-left: 10%;
+}
+
+.sidebar section {
+  margin: 16px 0px;
+}
+
+.sidebarText hr {
+  width: 80%;
+  margin: 0;
+  border: 0;
+  border-top: 0.2px solid var(--color-primary400);
 }
 
 .sidebarLinks, .sidebarProfile, .sidebarCategories, .sidebarFooter, .sidebarFav{
@@ -128,3 +162,4 @@ body{
 .profileImg{
   width: 32px;
 }
+

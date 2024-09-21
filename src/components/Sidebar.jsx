@@ -1,27 +1,56 @@
-import Footer from "./Footer"
-import {Link} from "react-router-dom"
-import Dashboard from "../pages/Dashboard.jsx"
-import About from "../pages/About.jsx"
-import Navbar from "./NavBar.jsx"
+// import Footer from "./Footer"
+// import Navbar from "./NavBar.jsx"
+import { Link } from "react-router-dom";
+import Dashboard from "../pages/Dashboard.jsx";
+import About from "../pages/About.jsx";
 
 import profileImg from "../assets/icons/profile.svg";
 import logoImg from "../assets/icons/logo.png";
-
+import homeImg from "../assets/icons/home.svg";
+import cardImg from "../assets/icons/card.svg";
+import breackfastImg from "../assets/icons/breackfast.svg";
+import lunchImg from "../assets/icons/lunch.svg";
+import dinnerImg from "../assets/icons/dinner.svg";
+import dessertImg from "../assets/icons/dessert.svg";
+import snackImg from "../assets/icons/snack.svg";
+import heartImg from "../assets/icons/heart.svg";
+import thumbsUpImg from "../assets/icons/thumbsUp.svg";
+import githubImg from "../assets/icons/github.svg";
 
 function Sidebar() {
   return (
-
     <div className="sidebar" id="">
+      <div className="sidebarIcons">
+        <section className="sidebarProfileXs">
+          <img className="logoImg" src={logoImg} alt="" />
+        </section>
+        <hr />
+        <section className="sidebarLinksXs">
+          <img src={homeImg} alt="home" />
+          <img src={cardImg} alt="about us" />
+        </section>
+        <hr />
+        <section className="sidebarCategoriesXs">
+          <img src={breackfastImg} alt="breackfast" />
+          <img src={lunchImg} alt="lunch" />
+          <img src={dinnerImg} alt="home" />
+          <img src={dessertImg} alt="about us" />
+          <img src={snackImg} alt="about us" />
+        </section>
+        <hr />
 
-    <div className="sidebarIcons">
-    <section className="sidebarProfileXs">
-        <img className="logoImg" src={logoImg} alt="" />
-      </section>
+        <section className="sidebarFavXs">
+          <img src={heartImg} alt="favorite" />
+          <img src={thumbsUpImg} alt="liked" />
+        </section>
+
+        <hr />
+        <section className="sidebarFooterXs">
+          <img src={githubImg} alt="github" />
+        </section>
       </div>
 
-
       <div className="sidebarText">
-
         <section className="sidebarProfile">
           <img className="profileImg" src={profileImg} alt="" />
           <h2>Lira</h2>
@@ -30,24 +59,29 @@ function Sidebar() {
         <hr />
 
         <section className="sidebarLinks">
-          <Link to="/" element={<Dashboard/>}>Home</Link>
-          <Link to="/About" element={<About />}>About Us</Link>
+          <Link to="/" element={<Dashboard />}>
+            Home
+          </Link>
+          <Link to="/About" element={<About />}>
+            About Us
+          </Link>
         </section>
 
         <hr />
 
         <section className="sidebarCategories">
-        <p className="smallHeader">Categories</p>
+          <p className="smallHeader">Categories</p>
           <p>Breakfast</p>
           <p>Lunch</p>
-          <p>Snack</p>
           <p>Dinner</p>
+          <p>Dessert</p>
+          <p>Snack</p>
         </section>
 
         <hr />
 
         <section className="sidebarFav">
-        <p className="smallHeader">Featured</p>
+          <p className="smallHeader">Featured</p>
           <p>Favorites</p>
           <p>Liked</p>
         </section>
@@ -55,10 +89,11 @@ function Sidebar() {
         <hr />
 
         <section className="sidebarFooter">
-          <a id="githubLink" href="https://github.com/clasei/flavorflow">FlavorFlow Repo</a>
+          <a id="githubLink" href="https://github.com/clasei/flavorflow">
+            FlavorFlow Repo
+          </a>
         </section>
       </div>
-
     </div>
     // <div id="sidebar">
     //   <Navbar />
@@ -68,7 +103,7 @@ function Sidebar() {
     //   </section>
     //   <Footer />
     // </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
