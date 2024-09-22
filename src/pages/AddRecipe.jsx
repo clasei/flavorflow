@@ -1,42 +1,48 @@
-import { useState } from "react"
+import { useState } from "react";
+
+import veganImg from "../assets/icons/vegan.svg";
+import lactoseImg from "../assets/icons/lactose.svg";
+import glutenImg from "../assets/icons/gluten.svg";
+import nutImg from "../assets/icons/nut.png";
 
 function AddRecipe({ onAddRecipe }) {
-
   const [newAddedRecipe, setNewAddedRecipe] = useState({
-    name: '',
+    name: "",
     cookingTimeMinutes: 0,
     servings: 0,
-    difficulty: '',
-    cuisine: '',
+    difficulty: "",
+    cuisine: "",
     caloriesPerServing: 0,
-    image: '',
+    image: "",
     rating: 0,
-    mealType: '',
+    mealType: "",
     liked: false,
     tags: [],
     ingredients: [],
-    instructions: []
-  })
+    instructions: [],
+  });
 
   const handlerUnique = (e) => {
-    const { name, type, value, checked } = e.target
-    
+    const { name, type, value, checked } = e.target;
+
     setNewAddedRecipe((currentState) => ({
       // superficial clone from the currentState to create a new version including the input changes
       ...currentState,
       // checks values as well as checkboxes
-      [name]: type === 'checkbox' ? checked : value
-      }))
-  }
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
 
   const handleTagChange = (e) => {
     const { name, checked } = e.target;
     setNewAddedRecipe((prev) => ({
       ...prev,
-      tags: checked ? [...prev.tags, name] : prev.tags.filter((tag) => tag !== name)
-    }))
-  }
-  
+      tags: checked
+        ? [...prev.tags, name]
+        : prev.tags.filter((tag) => tag !== name),
+    }));
+  };
+
   /* --> need to review this in the future if adding different handlers <--
 
   const handleMealTypeChange = (e) => {
@@ -56,144 +62,77 @@ function AddRecipe({ onAddRecipe }) {
   */
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    console.log('new recipe to add', newAddedRecipe)
+    console.log("new recipe to add", newAddedRecipe);
 
-    onAddRecipe(newAddedRecipe)
+    onAddRecipe(newAddedRecipe);
 
     // restarts form aka form clean after submit
     setNewAddedRecipe({
-      name: '',
+      name: "",
       cookingTimeMinutes: 0,
       servings: 0,
-      difficulty: '',
-      cuisine: '',
+      difficulty: "",
+      cuisine: "",
       caloriesPerServing: 0,
-      image: '',
+      image: "",
       rating: 0,
-      mealType: '',
+      mealType: "",
       liked: false,
       tags: [],
       ingredients: [], // check empty array depending on final type
-      instructions: [] // check empty array depending on final type
-    })
-  }
-
-
+      instructions: [], // check empty array depending on final type
+    });
+  };
 
   return (
-    <div className="new-recipe-form">
-
-      <form onSubmit={handleSubmit}>
-
-        <span>Add a Recipe</span>
-        <div>
-          <label>
-            Name
-            <input name="name" type="text" placeholder="Grandma's secret cookie recipe" onChange={handlerUnique} value={newAddedRecipe.name} />
-          </label>
-
-
-{/* changed to handler unique for testing; added textaera provisonally */}
-        <label>{/*Revisar lista dinámica - clase 20/09*/}
-          Ingredients
-          <textarea name="ingredients" rows="5" placeholder="Potatoe" onChange={handlerUnique} value={newAddedRecipe.ingredients} />
-          {/* <input name="quantity" type="text" placeholder="100gr"  value={quantity} /> */}
-        </label>
-
-        <label>{/*Revisar lista dinámica - clase 20/09 - hacerlo de tal manera que sea como añadir elementos a una lista*/}
-          Instructions
-          <textarea name="instructions" rows="5" placeholder="Mix all dry ingredients..." onChange={handlerUnique} value={newAddedRecipe.instructions} />
-        </label>
-{/* changed to handler unique for testing */}
-
-
-        <label>
-          Cooking time -minutes-
-          <input name="cookingTimeMinutes" type="number" placeholder="30" onChange={handlerUnique} value={newAddedRecipe.cookingTimeMinutes} />
-        </label>
-
-        <label>
-          Servings
-          <input name="servings" type="number" placeholder="4" onChange={handlerUnique} value={newAddedRecipe.servings} />
-        </label>
-
-        <label>
-          Difficulty
-          <select name="difficulty" onChange={handlerUnique} value={newAddedRecipe.difficulty} >
-              <option value="">-- None --</option>
-              <option value="Easy">Easy</option>
-              <option value="Medium">Medium</option>
-              <option value="Difficult">Difficult</option>
-            </select>
-        </label>
-
-        <label>
-          Cuisine
-          <input name="cuisine" type="text" placeholder="Homemade" onChange={handlerUnique} value={newAddedRecipe.cuisine} />
-        </label>
-
-        <label>
-          Calories
-          <input name="caloriesPerServing" type="text" placeholder="250" onChange={handlerUnique} value={newAddedRecipe.caloriesPerServing} />
-        </label>
-
-  {/* TAGS START HERE */}
-        <label>
-            Vegan
+    <div className="mainContainer">
+      <div className="mainBar">
+        <p>New Recipe</p>
+        
+      </div>
+      <div className="new-recipe-form">
+        <h4>Add a Recipe</h4>
+        <p className="note">(*) Required fields</p>
+        <form onSubmit={handleSubmit}>
+          <label className="largeLabel">
+            Name *
             <input
-              name="Vegan"
-              type="checkbox"
-              checked={newAddedRecipe.tags.includes("Vegan")}
-              onChange={handleTagChange}
+              name="name"
+              type="text"
+              placeholder="Grandma's secret cookie recipe"
+              onChange={handlerUnique}
+              value={newAddedRecipe.name}
+              required
             />
           </label>
 
-          <label>
-            Lactose Free
-            <input
-              name="Lactose Free"
-              type="checkbox"
-              checked={newAddedRecipe.tags.includes("Lactose Free")}
-              onChange={handleTagChange}
-            />
+          <label className="largeLabel">
+            Ingredients *
+            <textarea
+              name="ingredients"
+              rows="5"
+              placeholder="Potato"
+              onChange={handlerUnique}
+              value={newAddedRecipe.ingredients}
+              required
+            ></textarea>
           </label>
 
-          <label>
-            Gluten Free
-            <input
-              name="Gluten Free"
-              type="checkbox"
-              checked={newAddedRecipe.tags.includes("Gluten Free")}
-              onChange={handleTagChange}
-            />
-          </label>
-  {/* TAGS START HERE */}
-
-          <label>
-            Picture
-            <input name="image" type="text" placeholder="Place your picture link here!" onChange={handlerUnique} value={newAddedRecipe.image} />
+          <label className="largeLabel">
+            Instructions *
+            <textarea
+              name="instructions"
+              rows="5"
+              placeholder="Mix all dry ingredients..."
+              onChange={handlerUnique}
+              value={newAddedRecipe.instructions}
+              required
+            ></textarea>
           </label>
 
-          <label>
-            Rating
-            <select name="rating" onChange={handlerUnique} value={newAddedRecipe.rating} >
-                <option value="">-- None --</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-          </label>
-
-          <label>
-            Did you liked it?
-            <input name="liked" type="checkbox" onChange={handlerUnique} value={newAddedRecipe.liked} />
-          </label>
-
-          <label>
+          <label className="largeLabel">
             Meal Type
             <select name="mealType" onChange={handlerUnique} value={newAddedRecipe.mealType} >
                 <option value="">-- None --</option>
@@ -204,14 +143,155 @@ function AddRecipe({ onAddRecipe }) {
                 <option value="Dessert">Dessert</option>
               </select>
           </label>
-        </div>
 
-        <button type="submit">Add Recipe</button>
-        
-      </form>
+          <label className="smallLabel">
+            Cooking time -minutes-
+            <input
+              name="cookingTimeMinutes"
+              type="number"
+              placeholder="30"
+              onChange={handlerUnique}
+              value={newAddedRecipe.cookingTimeMinutes}
+            />
+          </label>
+
+          <label className="smallLabel">
+            Servings
+            <input
+              name="servings"
+              type="number"
+              placeholder="4"
+              onChange={handlerUnique}
+              value={newAddedRecipe.servings}
+            />
+          </label>
+
+          <label className="smallLabel">
+            Difficulty
+            <select
+              name="difficulty"
+              onChange={handlerUnique}
+              value={newAddedRecipe.difficulty}
+            >
+              <option value="">-- None --</option>
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Difficult">Difficult</option>
+            </select>
+          </label>
+
+          <label className="smallLabel">
+            Cuisine
+            <input
+              name="cuisine"
+              type="text"
+              placeholder="Homemade"
+              onChange={handlerUnique}
+              value={newAddedRecipe.cuisine}
+            />
+          </label>
+
+          <label className="smallLabel">
+            Calories
+            <input
+              name="caloriesPerServing"
+              type="text"
+              placeholder="250"
+              onChange={handlerUnique}
+              value={newAddedRecipe.caloriesPerServing}
+            />
+          </label>
+
+          <label className="smallLabel">
+            Rating
+            <select
+              name="rating"
+              onChange={handlerUnique}
+              value={newAddedRecipe.rating}
+            >
+              <option value="">-- None --</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+
+          <div className="checkLabel">
+            <label>
+              <div className="iconLabel">
+                <img src={veganImg} alt="" />
+                Vegan
+              </div>
+              <input
+                name="Vegan"
+                type="checkbox"
+                checked={newAddedRecipe.tags.includes("Vegan")}
+                onChange={handleTagChange}
+              />
+            </label>
+
+            <label>
+              <div className="iconLabel">
+                <img src={lactoseImg} alt="" />
+                Lactose Free
+              </div>
+
+              <input
+                name="Lactose Free"
+                type="checkbox"
+                checked={newAddedRecipe.tags.includes("Lactose Free")}
+                onChange={handleTagChange}
+              />
+            </label>
+
+            <label>
+              <div className="iconLabel">
+                <img src={glutenImg} alt="" />
+                Gluten Free
+              </div>
+              <input
+                name="Gluten Free"
+                type="checkbox"
+                checked={newAddedRecipe.tags.includes("Gluten Free")}
+                onChange={handleTagChange}
+              />
+            </label>
+
+            <label>
+              <div className="iconLabel">
+                <img src={nutImg} alt="" />
+                Nut Free
+              </div>
+              <input
+                name="Nut Free"
+                type="checkbox"
+                checked={newAddedRecipe.tags.includes("Nut Free")}
+                onChange={handleTagChange}
+              />
+            </label>
+          </div>
+
+          <label className="largeLabel">
+            Picture
+            <input
+              name="image"
+              type="text"
+              placeholder="Place your picture link here!"
+              onChange={handlerUnique}
+              value={newAddedRecipe.image}
+            />
+          </label>
+         
+         
+          
+            
+          <button type="submit">Add Recipe</button>
+        </form>
+      </div>
     </div>
-  )
+  );
 }
 
-export default AddRecipe
-
+export default AddRecipe;

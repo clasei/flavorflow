@@ -109,7 +109,11 @@ function RecipeCard({ eachRecipe, handleDelete, index }) {
           >
             <h4>{eachRecipe.name}</h4>
           </Link>
-          <p>{eachRecipe.instructions[0].slice(0, 40)}..</p>
+          <p>
+  {eachRecipe.instructions && eachRecipe.instructions.length > 0
+    ? eachRecipe.instructions[0].slice(0, 40) + "..." 
+    : "No instructions available"}
+</p>
         </section>
 
         <section className="cardResume">
