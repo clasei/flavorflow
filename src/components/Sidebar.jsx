@@ -90,7 +90,7 @@ function Sidebar() {
           <p>Dinner</p>
           </Link>
 
-          <Link to={`/Recipes/Category/Dinner`}>
+          <Link to={`/Recipes/Category/Dessert`}>
           <p>Dessert</p>
           </Link>
 
