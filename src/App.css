@@ -336,7 +336,7 @@ body {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(25, 28, 23, 1) 5%,
+    rgb(58, 66, 52, 0.9) 5%,
     rgba(0, 128, 0, 0) 100%
   );
   z-index: 1;
