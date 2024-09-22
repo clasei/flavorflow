@@ -53,25 +53,28 @@ function App() {
     <div id='mainPage'>
 
         {/* testing, unfinished */}
-        <div>
+        {/* <div>
           {recipes.map((eachRecipe, index) => (
             <div key={index}>
               <Sidebar eachRecipe={eachRecipe} recipes={recipes} />
 
             </div>
             ))}
-        </div>
+        </div> */}
       {/* testing, unfinished */}
         
-          
-       
+        {/* Sidebar component doesn't receive / use any props */}
+        <Sidebar />
        
         <Routes>
           <Route path="/" element={<Dashboard recipes={recipes} handleDelete={handleDelete} />}></Route>
 
           <Route path="/AddRecipe" element={<AddRecipe onAddRecipe={addRecipe} />}></Route>
           <Route path="/Recipes/:recipeName" element={<RecipeDetails recipes={recipes} />}></Route>
-          <Route path="/Recipes/:mealType" element={<Category/>} recipes={recipes} handleDelete={handleDelete}></Route>
+          
+          {/* changed to <Route path="/Recipes/Category/:mealType" */}
+          {/* Sidebar links updtaed to <Link to={`/Recipes/Category/Whatever`}> */}
+          <Route path="/Recipes/Category/:mealType" element={<Category recipes={recipes} handleDelete={handleDelete} />}></Route>
           <Route path="/About" element={<About/>}></Route>
 
           <Route path="*" element={<NotFound/>}></Route>

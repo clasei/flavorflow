@@ -1,6 +1,7 @@
 // import Footer from "./Footer"
 // import Navbar from "./NavBar.jsx"
 import { Link } from "react-router-dom";
+
 import Dashboard from "../pages/Dashboard.jsx";
 import About from "../pages/About.jsx";
 
@@ -18,7 +19,7 @@ import thumbsUp1Img from "../assets/icons/thumbsUp1.svg";
 import githubImg from "../assets/icons/github.svg";
 import addImg from "../assets/icons/add.svg";
 
-function Sidebar({ eachRecipe, recipe }) {
+function Sidebar() {
   
   return (
     <div className="sidebar" id="">
@@ -77,23 +78,23 @@ function Sidebar({ eachRecipe, recipe }) {
         <section className="sidebarCategories">
           <p className="smallHeader">Categories</p>
           
-          <Link to={`/Recipes/${eachRecipe.mealType}`}>
+          <Link to={`/Recipes/Category/Breakfast`}>
             <p>Breakfast</p>
           </Link>
           
-          <Link to={`/Recipes/${eachRecipe.mealType}`}>
+          <Link to={`/Recipes/Category/Lunch`}>
           <p>Lunch</p>
           </Link>
           
-          <Link to={`/Recipes/${eachRecipe.mealType}`}>
+          <Link to={`/Recipes/Category/Dinner`}>
           <p>Dinner</p>
           </Link>
 
-          <Link to={`/Recipes/${eachRecipe.mealType}`}>
+          <Link to={`/Recipes/Category/Dinner`}>
           <p>Dessert</p>
           </Link>
 
-          <Link to={`/Recipes/${eachRecipe.mealType}`}>
+          <Link to={`/Recipes/Snack`}>
           <p>Snack</p>
           </Link>
 
