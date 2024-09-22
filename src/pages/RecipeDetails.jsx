@@ -1,13 +1,20 @@
-import { useParams } from "react-router-dom"
-import Recipes from "../data/recipes.json" 
+import { useParams } from "react-router-dom" 
 
-function RecipeDetails() {
+function RecipeDetails({ recipes }) {
   
-  const param = useParams()
-  
-  const recipeToDisplay = Recipes.find((eachRecipe) =>{
-    return eachRecipe.name === param.recipeName
-  })
+  // // shorter version on lines 11-12
+  // const param = useParams()
+  // const recipeToDisplay = Recipes.find((eachRecipe) =>{
+  //   return eachRecipe.name === param.recipeName
+  // })
+
+  const { recipeName } = useParams()
+  const recipeToDisplay = recipes.find(eachRecipe => eachRecipe.name === recipeName)
+
+  // handles cases in which recipName is not found
+  if (!recipeToDisplay) {
+    return <div>Recipe details - No recipe found with the name "{recipeName}"</div>
+  }
 
   
   return (

@@ -18,7 +18,8 @@ import thumbsUp1Img from "../assets/icons/thumbsUp1.svg";
 import githubImg from "../assets/icons/github.svg";
 import addImg from "../assets/icons/add.svg";
 
-function Sidebar() {
+function Sidebar({ eachRecipe, recipe }) {
+  
   return (
     <div className="sidebar" id="">
       <div className="sidebarIcons">
@@ -75,11 +76,27 @@ function Sidebar() {
 
         <section className="sidebarCategories">
           <p className="smallHeader">Categories</p>
-          <p>Breakfast</p>
+          
+          <Link to={`/Recipes/${eachRecipe.mealType}`}>
+            <p>Breakfast</p>
+          </Link>
+          
+          <Link to={`/Recipes/${eachRecipe.mealType}`}>
           <p>Lunch</p>
+          </Link>
+          
+          <Link to={`/Recipes/${eachRecipe.mealType}`}>
           <p>Dinner</p>
+          </Link>
+
+          <Link to={`/Recipes/${eachRecipe.mealType}`}>
           <p>Dessert</p>
+          </Link>
+
+          <Link to={`/Recipes/${eachRecipe.mealType}`}>
           <p>Snack</p>
+          </Link>
+
         </section>
 
         <hr />

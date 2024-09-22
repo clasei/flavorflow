@@ -355,21 +355,21 @@ body {
 .topIcons {
   position: absolute;
   top: 10px;
-  left: 10px; /* Mantén esto para que el contenedor se posicione a la izquierda */
+  left: 10px; 
   z-index: 10;
   display: flex;
-  justify-content: space-between; /* Permite espacio entre los elementos */
-  width: calc(90% - 20px); /* Asegura que ocupe todo el ancho disponible */
+  justify-content: space-between; 
+  width: calc(90% - 20px); 
   margin: 16px 5%;
 }
 
 .fav {
-  display: flex; /* Asegura que los íconos de favorito y like estén en línea */
-  gap: 16px; /* Espacio entre los íconos de favorito y like */
+  display: flex; 
+  gap: 16px; 
 }
 
 .rating {
-  margin-left: auto; /* Empuja el rating a la derecha */
+  margin-left: auto; 
 }
 
 .cardResume {

@@ -23,8 +23,16 @@ import heart0Img from "../assets/icons/heart0.svg";
 import heart1Img from "../assets/icons/heart1.svg";
 import editImg from "../assets/icons/edit.svg";
 
-function RecipeCard(props) {
-  const [liked, setLiked] = useState(props.eachRecipe.liked);
+function RecipeCard({ eachRecipe, handleDelete, index }) {
+
+
+  if (!eachRecipe) {
+    console.error('no recipe data provided');
+    return null // render stops if tehre's no data
+  }
+  
+
+  const [liked, setLiked] = useState(eachRecipe.liked);
   const [favorited, setFavorited] = useState(false);
 
   const handleLike = () => {
@@ -64,18 +72,18 @@ function RecipeCard(props) {
     return <div className="star-rating">{stars}</div>;
   };
 
-  console.log("Rating recibido:", props.eachRecipe.rating);
+  // console.log("Rating recibido:", eachRecipe.rating);
   {
     /*Tener en cuenta el traer sólo las propiedades que necesitamos  -en lugar de pasarle como parámetro props-*/
   }
   return (
     <div>
-      <div className="card" key={props.eachRecipe.id}>
+      <div className="card" key={eachRecipe.id}>
         <section className="cardImg">
           <img
             className="recipeImg"
-            src={props.eachRecipe.image}
-            alt={props.eachRecipe.name}
+            src={eachRecipe.image}
+            alt={eachRecipe.name}
           />
 
           <div className="topIcons">
@@ -88,7 +96,7 @@ function RecipeCard(props) {
               </div>
             </div>
             <div className="rating">
-              {getRating(props.eachRecipe.rating)}{" "}
+              {getRating(eachRecipe.rating)}{" "}
             </div>
           </div>
         </section>
@@ -96,44 +104,44 @@ function RecipeCard(props) {
         <section className="cardHeader">
           <Link
             className="recipeLink"
-            to={`/recipes/${props.eachRecipe.name}`}
+            to={`/recipes/${eachRecipe.name}`}
             element={<RecipeDetails />}
           >
-            <h4>{props.eachRecipe.name}</h4>
+            <h4>{eachRecipe.name}</h4>
           </Link>
-          <p>{props.eachRecipe.instructions[0].slice(0, 40)}..</p>
+          <p>{eachRecipe.instructions[0].slice(0, 40)}..</p>
         </section>
 
         <section className="cardResume">
           <div className="iconProperty">
             <img src={timeImg} alt="time" />
-            <p>{props.eachRecipe.cookingTimeMinutes} min</p>
+            <p>{eachRecipe.cookingTimeMinutes} min</p>
           </div>
           <span>|</span>
           <div className="iconProperty">
             <img src={difficultyImg} alt="difficulty" />
-            <p>{props.eachRecipe.difficulty}</p>
+            <p>{eachRecipe.difficulty}</p>
           </div>
           <span>|</span>
           <div className="iconProperty">
             <img src={servingsImg} alt="servings" />
-            <p>{props.eachRecipe.servings} servings</p>
+            <p>{eachRecipe.servings} servings</p>
           </div>
           <span>|</span>
           <div className="iconProperty">
             <img src={caloriesImg} alt="calories" />
-            <p>{props.eachRecipe.caloriesPerServing} cal.</p>
+            <p>{eachRecipe.caloriesPerServing} cal.</p>
           </div>
         </section>
 
         <section className="cardSimpleTags">
-          <p>{props.eachRecipe.mealType}</p>
+          <p>{eachRecipe.mealType}</p>
           {/*aquí si hay varias debería mostrarlas*/}
-          <p>{props.eachRecipe.cuisine}</p>
+          <p>{eachRecipe.cuisine}</p>
         </section>
 
         <section className="cardTags">
-          {props.eachRecipe.tags.map((tag, index) => (
+          {eachRecipe.tags.map((tag, index) => (
             <div key={index} className="tag">
               {getIcon(tag)}
               {tag}
@@ -148,7 +156,7 @@ function RecipeCard(props) {
           
         <button
             className="deleteBtn"
-            onClick={() => props.handleDelete(props.index)}
+            onClick={() => handleDelete(index)}
           >
             <img title="delete" src={deleteImg} alt="delete" />
           </button>
@@ -158,7 +166,7 @@ function RecipeCard(props) {
           
           <Link
             className="openBtn"
-            to={`/recipes/${props.eachRecipe.name}`}
+            to={`/recipes/${eachRecipe.name}`}
             element={<RecipeDetails />}
           >
             <img title="open" src={openImg} alt="open" />

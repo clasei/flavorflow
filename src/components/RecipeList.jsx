@@ -1,31 +1,21 @@
-import { useState } from "react"
+// import { useState } from "react"
+// import {Routes, Route, Link} from "react-router-dom"
+// import RecipeCard from "./RecipeCard"
+// import Recipes from "../data/recipes.json"
+// import RecipeDetails from "../pages/RecipeDetails.jsx"
+// previous lines not needed, recipes and handleDelete props received from App
 import RecipeCard from "./RecipeCard"
-import Recipes from "../data/recipes.json"
-import {Routes, Route, Link} from "react-router-dom"
-import RecipeDetails from "../pages/RecipeDetails.jsx"
 
 
-function RecipeList() {
+function RecipeList({ recipes, handleDelete }) {
 
-  const [ recipesArr, setRecipes ] = useState(Recipes)
-
-  const handleDelete = (index) => {
-    console.log("removiendo elemento", index)
-    const clone = recipesArr.slice(0)
-    clone.splice(index, 1)
-    setRecipes(clone)
-  }
-
-{/*hay que añadir el estado en App.jsx*/}
 
   return (
     <div  id="eachCardOnList">
-       {recipesArr.map((eachRecipe, index)=>
-      (
-        <div>
+       {recipes.map((eachRecipe, index) => (
+        <div key={index}>
           <RecipeCard eachRecipe={eachRecipe} handleDelete = {handleDelete} index={index}/>
 
-          {/* <Link to={`/recipes/${eachRecipe.name}`} element={< RecipeDetails />}>{eachRecipe.name}</Link> */}
          </div>
         ))}
     </div>
