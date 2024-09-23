@@ -111,7 +111,9 @@ function RecipeCard({ eachRecipe, handleDelete, index }) {
           </Link>
           <p>
   {eachRecipe.instructions && eachRecipe.instructions.length > 0
-    ? eachRecipe.instructions.slice(0, 150) + "..." 
+  ? typeof eachRecipe.instructions === 'string'
+    ? eachRecipe.instructions.slice(0, 42) + "..." // for strings
+    : eachRecipe.instructions.join(' ').slice(0, 42) + "..." // joins the array into strings
     : "No instructions available"}
 </p>
         </section>
