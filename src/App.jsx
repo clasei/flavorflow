@@ -48,10 +48,17 @@ function App() {
   }
 
 
-  const onEditRecipe = (onEditRecipe) => {
+  const onEditRecipe = (editedRecipe) => {
     console.log('adding new recipe via App', onEditRecipe)
-    // clone to add new recipes to recipes state
-    setRecipes((currentStateRecipes) => [...currentStateRecipes, onEditRecipe]) 
+    // // next line commented for testing
+    // setRecipes((currentStateRecipes) => [...currentStateRecipes, onEditRecipe]) 
+
+    // map() loops through recipes in the currentStateRecipes; searches for the same id that edited recipe id
+    // if the id matches, the recipes is updated with editedRecipe
+    setRecipes((currentStateRecipes) => {
+      return currentStateRecipes.map((recipe) => recipe.id === editedRecipe.id ? editedRecipe : recipe
+      )
+    })
   }
 
   return (

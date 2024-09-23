@@ -32,10 +32,7 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
     // ingredients: recipeToEdit.ingredients,
     // instructions:recipeToEdit.instructions
   });
-
-  console.log("editRecipe", editRecipe)
-  console.log("recipetoedit", recipeToEdit)
-
+  
 
   const handlerUnique = (e) => {
     const { name, type, value, checked } = e.target;
@@ -60,26 +57,10 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // console.log("new recipe to add", editRecipe);
+    console.log("recipe updated", editRecipe);
 
     onEditRecipe(editRecipe);
 
-    // restarts form aka form clean after submit
-    // setEditRecipe({
-    //   name: "",
-    //   cookingTimeMinutes: 0,
-    //   servings: 0,
-    //   difficulty: "",
-    //   cuisine: "",
-    //   caloriesPerServing: 0,
-    //   image: "",
-    //   rating: 0,
-    //   mealType: "",
-    //   liked: false,
-    //   tags: [],
-    //   ingredients: [], 
-    //   instructions: [], 
-    // });
   };
  
   
@@ -90,9 +71,11 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
         
       </div>
       <div className="new-recipe-form">
-        <h4>Add a Recipe</h4>
+        <h4>Update a Recipe</h4>
         <p className="note">(*) Required fields</p>
+
         <form onSubmit={handleSubmit}>
+
           <label className="largeLabel">
             Name *
             <input
@@ -276,7 +259,7 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
          
           
             
-          <button type="submit">Add Recipe</button>
+          <button type="submit">Update Recipe</button>
         </form>
       </div>
     </div>
