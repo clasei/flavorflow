@@ -789,3 +789,91 @@ input:focus, select:focus, textarea:focus {
   height: 24px;
 }
 
+/*About us-------------------------------------------------*/
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 96px auto 0; 
+  max-width: 80%;
+  background: #f9f9f9;
+  border-radius: 2%;
+  box-shadow: 0 2% 5% rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 64px;
+}
+
+.aboutContainer h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  font-family: var(--font-heading);
+  color: var(--color-secundary500);
+  margin-top: 40px; 
+}
+
+.aboutContainer span {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 16px;
+  color: var(--color-primary500);
+  width: 38%;
+  font-family: var(--font-heading);
+}
+
+.aboutDescription{
+  font-size: 120%;
+  line-height: 1.6;
+  margin: 2% 0;
+  padding: 0 5%;
+  text-align: center;
+  width: 860px;
+  margin-bottom:64px;
+}
+
+#yellowSpanH1 {
+  color: var(--color-accent600);
+  font-size: 40px;
+}
+
+#yellowSpan {
+  color: var(--color-accent400);
+}
+
+#about {
+  height: 700px;
+  object-fit: contain;
+}
+
+.chefs{
+  display: flex;
+  width: 800px;
+  margin-top: 24px;
+}
+
+.chefCard {
+width: 260px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.chefCard h3{
+  font-family: var(--font-heading);
+  color: var(--color-secundary500);
+}
+
+.chefCard p, .chefCard a{
+  font-size: 14px;
+  color: var(--color-secundary500);
+  margin: 0 auto;
+}
+
+.chefCard a{
+  
+}
