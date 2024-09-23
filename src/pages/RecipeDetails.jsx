@@ -141,7 +141,9 @@ function RecipeDetails({ recipes, handleDelete }) {
                 {/* Usa el index del recipeToDisplay dentro de recipes */}
                 <img title="delete" src={deleteImg} alt="delete" />
               </button>
-              <Link to={`/Recipes/Edit/${recipeToDisplay.name}`}>
+
+              {/* gets recipeToDisplay.id for the redirection */}
+              <Link to={`/Recipes/Edit/${recipeToDisplay.id}`}>
                 <img title="edit" id="detailsEdit" src={editImg} alt="edit" />
               </Link>
            

@@ -175,8 +175,9 @@ function RecipeCard({ eachRecipe, handleDelete, index }) {
           <Link
             className="openBtn"
             to={`/recipes/${eachRecipe.name}`}
-            element={<RecipeDetails />}
           >
+            {/* element={<RecipeDetails />} == no needed in the link above */}
+
             <img title="open" src={openImg} alt="open" />
           </Link>
         </section>
