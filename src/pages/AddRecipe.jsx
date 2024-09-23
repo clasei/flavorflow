@@ -20,8 +20,8 @@ function AddRecipe({ onAddRecipe }) {
     mealType: "",
     liked: false,
     tags: [],
-    ingredients: [],
-    instructions: [],
+    ingredients: '',
+    instructions: '',
   });
 
   const handlerUnique = (e) => {

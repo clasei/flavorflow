@@ -111,7 +111,7 @@ function RecipeCard({ eachRecipe, handleDelete, index }) {
           </Link>
           <p>
   {eachRecipe.instructions && eachRecipe.instructions.length > 0
-    ? eachRecipe.instructions[0].slice(0, 40) + "..." 
+    ? eachRecipe.instructions.slice(0, 150) + "..." 
     : "No instructions available"}
 </p>
         </section>

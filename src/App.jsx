@@ -34,10 +34,20 @@ function App() {
       localStorage.setItem('recipes', JSON.stringify(newRecipes))
   }, [recipes])
 
+
   const addRecipe = (newRecipe) => {
-    console.log('adding new recipe via App', newRecipe)
-    // clone to add new recipes to recipes state
-    setRecipes((currentStateRecipes) => [...currentStateRecipes, newRecipe]) 
+    
+    // adds a random ID between 1 and 1million to new added recipes to handle edit
+    const newRecipeWithId = {
+      ...newRecipe,
+      id: Math.floor(Math.random() * 1000000) + 1
+    }
+    console.log('adding new recipe via App', newRecipeWithId)
+
+    // setRecipes((currentStateRecipes) => [...currentStateRecipes, newRecipe]) // commmented to add newRecipe with ID
+    // setter function (setRecipes) used to update recipes state; currentStateRecipes = current value of the recipes state
+    // ...currentStateRecipes == spread operator creates a shallow clone and adds the new item (newRecipeWithId) to the array
+    setRecipes((currentStateRecipes) => [...currentStateRecipes, newRecipeWithId]) 
   }
 
   // removes recipes by index (funcion 'imported' from RecipeList)
@@ -46,7 +56,6 @@ function App() {
      updatedRecipes.splice(index, 1)
      setRecipes(updatedRecipes)
   }
-
 
   const onEditRecipe = (editedRecipe) => {
     console.log('adding new recipe via App', onEditRecipe)
