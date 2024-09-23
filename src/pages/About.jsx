@@ -8,7 +8,7 @@ function About() {
         <p>About Flavor Flow</p>
       </div>
         
-      <div class='aboutContainer'>
+      <div className='aboutContainer'>
   <h1>Flavor Flow 🍳 cooked by <span id='yellowSpanH1'>Sala 13</span></h1>
   <span>👩‍🍳 A quirky squad that accidentally mixed together in <span  id='yellowSpan'>Sala 12</span> and never looked back.</span>
   <img id='about' src={about} alt="sala 13" />
