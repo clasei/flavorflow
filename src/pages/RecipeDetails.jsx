@@ -1,32 +1,152 @@
-import { useParams } from "react-router-dom" 
+import { useParams, Link } from "react-router-dom";
 
-function RecipeDetails({ recipes }) {
-  
-  // // shorter version on lines 11-12
-  // const param = useParams()
-  // const recipeToDisplay = Recipes.find((eachRecipe) =>{
-  //   return eachRecipe.name === param.recipeName
-  // })
+import veganImg from "../assets/icons/vegan.svg";
+import lactoseImg from "../assets/icons/lactose.svg";
+import glutenImg from "../assets/icons/gluten.svg";
+import nutImg from "../assets/icons/nut.png";
 
-  const { recipeName } = useParams()
-  const recipeToDisplay = recipes.find(eachRecipe => eachRecipe.name === recipeName)
+import timeImg from "../assets/icons/time.svg";
+import difficultyImg from "../assets/icons/difficulty.svg";
+import servingsImg from "../assets/icons/servings.svg";
+import caloriesImg from "../assets/icons/calories.svg";
+import deleteImg from "../assets/icons/delete.svg";
+import editImg from "../assets/icons/edit.svg";
 
-  // handles cases in which recipName is not found
+import star0Img from "../assets/icons/star0.svg";
+import star1Img from "../assets/icons/star1.svg";
+
+function RecipeDetails({ recipes, handleDelete }) {
+  const { recipeName } = useParams();
+  const recipeToDisplay = recipes.find(eachRecipe => eachRecipe.name === recipeName);
+
+  // Manejo del caso en que el nombre de la receta no se encuentra
   if (!recipeToDisplay) {
-    return <div>Recipe details - No recipe found with the name "{recipeName}"</div>
+    return <div>Recipe details - No recipe found with the name "{recipeName}"</div>;
   }
 
-  
-  return (
-    <div>
-      
-      <h1>{recipeToDisplay.name}</h1>
-      <p>{recipeToDisplay.ingredients}</p>
-      <p>{recipeToDisplay.instructions}</p>
-      <p>{recipeToDisplay.tags}</p>
+  const getIcon = (tag) => {
+    switch (tag) {
+      case "Vegan":
+        return <img src={veganImg} alt="Vegan" />;
+      case "Gluten-Free":
+        return <img src={glutenImg} alt="Gluten-Free" />;
+      case "Lactose-Free":
+        return <img src={lactoseImg} alt="Lactose-Free" />;
+      case "Nut-Free":
+        return <img src={nutImg} alt="Nut-Free" />;
+      default:
+        return null;
+    }
+  };
 
+  const getRating = (rating) => {
+    const maxStars = 5;
+    const stars = [];
+
+    for (let i = 1; i <= maxStars; i++) {
+      if (i <= rating) {
+        stars.push(<img key={i} src={star1Img} alt="full star" />);
+      } else {
+        stars.push(<img key={i} src={star0Img} alt="empty star" />);
+      }
+    }
+    return <div className="star-rating">{stars}</div>;
+  };
+
+  return (
+    <div className="mainContainer">
+      <div className="mainBar">
+        <p>Recipe Details</p>
+      </div>
+
+      <div className="RecipeComplete" key={recipeToDisplay.id}>
+        <section className="recipeLeftSide">
+          <div>
+            <img className="recipeImg" src={recipeToDisplay.image} alt={recipeToDisplay.name} />
+          </div>
+
+          {/* Si vas a agregar aquí el rating, like o favorite, descomentar */}
+          {/* <div>
+            <div onClick={handleFavorite}>
+              <img title="favorite" src={favorited ? heart1Img : heart0Img} alt="Favorite" />
+            </div>
+            <div onClick={handleLike}>
+              <img title="like" src={liked ? thumbsUp1Img : thumbsUp0Img} alt="Like" />
+            </div>
+            <div className="rating">
+              {getRating(recipeToDisplay.rating)}{" "}
+            </div>
+          </div> */}
+        </section>
+
+        <section className="recipeRightSide">
+          <div>
+            <h1>{recipeToDisplay.name}</h1>
+            <hr />
+          </div>
+
+          <section className="cardResume">
+            <div className="iconProperty">
+              <img src={timeImg} alt="time" />
+              <p>{recipeToDisplay.cookingTimeMinutes} min</p>
+            </div>
+            <span>|</span>
+            <div className="iconProperty">
+              <img src={difficultyImg} alt="difficulty" />
+              <p>{recipeToDisplay.difficulty}</p>
+            </div>
+            <span>|</span>
+            <div className="iconProperty">
+              <img src={servingsImg} alt="servings" />
+              <p>{recipeToDisplay.servings} servings</p>
+            </div>
+            <span>|</span>
+            <div className="iconProperty">
+              <img src={caloriesImg} alt="calories" />
+              <p>{recipeToDisplay.caloriesPerServing} cal.</p>
+            </div>
+          </section>
+
+          <div>
+            <h2>Ingredients</h2>
+            <p>{recipeToDisplay.ingredients}</p>
+          </div>
+
+          <div>
+            <h2>Instructions</h2>
+            <p>{recipeToDisplay.instructions}</p>
+          </div>
+
+          <section className="cardSimpleTags">
+            <p>{recipeToDisplay.mealType}</p>
+            <p>{recipeToDisplay.cuisine}</p>
+          </section>
+
+          <section className="cardTags">
+            {recipeToDisplay.tags.map((tag, index) => (
+              <div key={index} className="tag">
+                {getIcon(tag)}
+                {tag}
+              </div>
+            ))}
+          </section>
+          <hr/>
+          <section className="cardActions">
+            
+            <div className="leftActions">
+              <button className="deleteBtn" onClick={() => handleDelete(recipes.indexOf(recipeToDisplay))}>
+                {/* Usa el index del recipeToDisplay dentro de recipes */}
+                <img title="delete" src={deleteImg} alt="delete" />
+              </button>
+              <Link to={`/Recipes/Edit/${recipeToDisplay.name}`}>
+                <img title="edit" id="edit" src={editImg} alt="edit" />
+              </Link>
+            </div>
+          </section>
+        </section>
+      </div>
     </div>
-  )
+  );
 }
 
-export default RecipeDetails
+export default RecipeDetails;

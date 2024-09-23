@@ -77,7 +77,7 @@ function App() {
           <Route path="/" element={<Dashboard recipes={recipes} handleDelete={handleDelete} />}></Route>
 
           <Route path="/AddRecipe" element={<AddRecipe onAddRecipe={addRecipe} />}></Route>
-          <Route path="/Recipes/:recipeName" element={<RecipeDetails recipes={recipes} />}></Route>
+          <Route path="/Recipes/:recipeName" element={<RecipeDetails recipes={recipes} handleDelete={handleDelete}/>}></Route>
           
           {/* changed to <Route path="/Recipes/Category/:mealType" */}
           {/* Sidebar links updtaed to <Link to={`/Recipes/Category/Whatever`}> */}
