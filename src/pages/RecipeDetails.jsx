@@ -59,10 +59,10 @@ function RecipeDetails({ recipes, handleDelete }) {
         <p>Recipe Details</p>
       </div>
 
-      <div className="RecipeComplete" key={recipeToDisplay.id}>
+      <div className="recipeComplete" key={recipeToDisplay.id}>
         <section className="recipeLeftSide">
           <div>
-            <img className="recipeImg" src={recipeToDisplay.image} alt={recipeToDisplay.name} />
+            <img className="recipeImgDetail" src={recipeToDisplay.image} alt={recipeToDisplay.name} />
           </div>
 
           {/* Si vas a agregar aquí el rating, like o favorite, descomentar */}
@@ -80,12 +80,12 @@ function RecipeDetails({ recipes, handleDelete }) {
         </section>
 
         <section className="recipeRightSide">
-          <div>
+          <div className="recipeDetailsHead">
             <h1>{recipeToDisplay.name}</h1>
-            <hr />
+          
           </div>
-
-          <section className="cardResume">
+          <hr />
+          <section className="recipeDetailscardResume">
             <div className="iconProperty">
               <img src={timeImg} alt="time" />
               <p>{recipeToDisplay.cookingTimeMinutes} min</p>
@@ -107,41 +107,44 @@ function RecipeDetails({ recipes, handleDelete }) {
             </div>
           </section>
 
-          <div>
+          <div   className="recipeDetailsText">
             <h2>Ingredients</h2>
             <p>{recipeToDisplay.ingredients}</p>
           </div>
 
-          <div>
+          <div className="recipeDetailsText">
             <h2>Instructions</h2>
             <p>{recipeToDisplay.instructions}</p>
           </div>
 
-          <section className="cardSimpleTags">
+            <section className="allDetailsTag">
+            <div className="recipeDetailsSimpleTags">
             <p>{recipeToDisplay.mealType}</p>
             <p>{recipeToDisplay.cuisine}</p>
-          </section>
+          </div>
 
-          <section className="cardTags">
+          <div className="recipeDetailsTags">
             {recipeToDisplay.tags.map((tag, index) => (
-              <div key={index} className="tag">
+              <div key={index} className="detailsTag">
                 {getIcon(tag)}
                 {tag}
               </div>
             ))}
-          </section>
+          </div>
+            </section>
+
           <hr/>
-          <section className="cardActions">
+          <section className="detailsLeftActions">
             
-            <div className="leftActions">
+            
               <button className="deleteBtn" onClick={() => handleDelete(recipes.indexOf(recipeToDisplay))}>
                 {/* Usa el index del recipeToDisplay dentro de recipes */}
                 <img title="delete" src={deleteImg} alt="delete" />
               </button>
               <Link to={`/Recipes/Edit/${recipeToDisplay.name}`}>
-                <img title="edit" id="edit" src={editImg} alt="edit" />
+                <img title="edit" id="detailsEdit" src={editImg} alt="edit" />
               </Link>
-            </div>
+           
           </section>
         </section>
       </div>
