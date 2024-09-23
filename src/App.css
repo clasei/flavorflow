@@ -118,7 +118,8 @@ body {
 
 .buttonSmall:hover,
 .buttonLarge:hover,
-#buttonDashboard:hover {
+#buttonDashboard:hover,
+#returnHome:hover {
   background-color: var(--color-accent600);
   transition: 0.5s;
 }
@@ -175,7 +176,7 @@ body {
   transition: 0.25s;
 }
 
-.buttonLarge {
+.buttonLarge, #returnHome {
   width: 80%;
   height: 40px;
   border-radius: 5px;
@@ -192,7 +193,7 @@ body {
   color: var(--color-secundary500);
 }
 
-.buttonLarge p {
+.buttonLarge p, #returnHome p {
   color: var(--color-secundary500);
 }
 
@@ -831,7 +832,7 @@ input:focus, select:focus, textarea:focus {
   margin: 2% 0;
   padding: 0 5%;
   text-align: center;
-  width: 860px;
+  width: 880px;
   margin-bottom:64px;
 }
 
@@ -844,7 +845,7 @@ input:focus, select:focus, textarea:focus {
   color: var(--color-accent400);
 }
 
-#about {
+#about, #notFound {
   height: 700px;
   object-fit: contain;
 }
@@ -874,6 +875,8 @@ align-items: center;
   margin: 0 auto;
 }
 
-.chefCard a{
-  
+#returnHome{
+  width: 200px;
+  text-decoration: none;
+  margin: 64px auto;
 }
