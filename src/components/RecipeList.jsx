@@ -14,7 +14,7 @@ function RecipeList({ recipes, handleDelete }) {
     <div  id="eachCardOnList">
        {recipes.map((eachRecipe, index) => (
         <div key={index}>
-          <RecipeCard eachRecipe={eachRecipe} handleDelete = {handleDelete} index={index}/>
+          <RecipeCard eachRecipe={eachRecipe} handleDelete={handleDelete} index={index} />
 
          </div>
         ))}

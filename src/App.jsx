@@ -11,6 +11,7 @@ import AddRecipe from './pages/AddRecipe.jsx'
 import Category from './pages/Category.jsx'
 // .json added !!!
 import RecipesFromJSON from "./data/recipes.json"
+import EditRecipeForm from "./pages/EditRecipeForm.jsx"
 
 
 function App() {
@@ -47,6 +48,12 @@ function App() {
   }
 
 
+  const onEditRecipe = (onEditRecipe) => {
+    console.log('adding new recipe via App', onEditRecipe)
+    // clone to add new recipes to recipes state
+    setRecipes((currentStateRecipes) => [...currentStateRecipes, onEditRecipe]) 
+  }
+
   return (
     <>
     <div id='appPage'>
@@ -76,6 +83,7 @@ function App() {
           {/* Sidebar links updtaed to <Link to={`/Recipes/Category/Whatever`}> */}
           <Route path="/Recipes/Category/:mealType" element={<Category recipes={recipes} handleDelete={handleDelete} />}></Route>
           <Route path="/About" element={<About/>}></Route>
+          <Route path="/Recipes/Edit/:recipeId" element={<EditRecipeForm recipes={recipes} onEditRecipe={onEditRecipe} />}></Route>
 
           <Route path="*" element={<NotFound/>}></Route>
         </Routes>

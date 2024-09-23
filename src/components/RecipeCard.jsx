@@ -164,7 +164,9 @@ function RecipeCard({ eachRecipe, handleDelete, index }) {
           >
             <img title="delete" src={deleteImg} alt="delete" />
           </button>
+          <Link to={`/Recipes/Edit/${eachRecipe.name}`}>
           <img title="edit" id="edit" src={editImg} alt="" />
+          </Link>
         </div>
 
           
