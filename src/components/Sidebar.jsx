@@ -62,7 +62,7 @@ function Sidebar() {
         <Link to={"/Recipes/Favorites"}>
           <img src={heart1Img} alt="favorite" />
           </Link>
-          <img src={thumbsUp1Img} alt="liked" />
+          {/* <img src={thumbsUp1Img} alt="liked" /> */}
           <Link className="buttonSmall" to="/AddRecipe">
             <img id="buttonLargeAddImg" src={addImg} alt="" />
           </Link>
@@ -126,7 +126,7 @@ function Sidebar() {
           <Link to={"/Recipes/Favorites"}>
           <p>Favorites</p>
           </Link>
-          <p>Liked</p>
+          {/* <p>Liked</p> */}
           <Link className="buttonLarge" to="/AddRecipe">
             <img id="buttonLargeAddImg" src={addImg} alt="" />
             <p>Add recipe</p>

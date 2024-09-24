@@ -388,5 +388,132 @@
     "liked": false,
     "favorite": false,
     "mealType": "Snack"
-  }
+  },
+  {
+    "id": 13,
+    "name": "Hummus and Carrot Sticks",
+    "ingredients": [
+      "1 cup cooked chickpeas",
+      "2 tablespoons tahini",
+      "1 clove garlic",
+      "Juice of 1 lemon",
+      "2 tablespoons olive oil",
+      "1 carrot (cut into sticks)"
+    ],
+    "instructions": [
+      "Blend the chickpeas, tahini, garlic, lemon juice, and olive oil in a blender until smooth.",
+      "Serve the hummus with carrot sticks for dipping."
+    ],
+    "cookingTimeMinutes": 10,
+    "servings": 2,
+    "difficulty": "Easy",
+    "cuisine": "Mediterranean",
+    "caloriesPerServing": 150,
+    "tags": [
+      "Vegan",
+      "Gluten-Free",
+      "Nut-Free"
+    ],
+    "image": "/assets/images/recipe13.webp",
+    "rating": 4.5,
+    "liked": false,
+    "favorite": false,
+    "mealType": "Snack"
+  },
+  {
+    "id": 14,
+    "name": "Chocolate Chip Cookies",
+    "ingredients": [
+      "1 cup flour",
+      "1/2 cup sugar",
+      "1/2 cup butter (softened)",
+      "1/2 cup chocolate chips",
+      "1 egg",
+      "1/2 teaspoon baking powder",
+      "1/4 teaspoon salt"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F).",
+      "Mix the butter and sugar until smooth, then add the egg and mix again.",
+      "In a separate bowl, combine flour, baking powder, and salt.",
+      "Gradually mix the dry ingredients into the wet mixture.",
+      "Stir in the chocolate chips.",
+      "Spoon dough onto a baking sheet and bake for 10-12 minutes."
+    ],
+    "cookingTimeMinutes": 20,
+    "servings": 4,
+    "difficulty": "Medium",
+    "cuisine": "American",
+    "caloriesPerServing": 300,
+    "tags": [
+      "Vegetarian",
+      "Nut-Free"
+    ],
+    "image": "/assets/images/recipe15.webp",
+    "rating": 4.8,
+    "liked": false,
+    "favorite": false,
+    "mealType": "Dessert"
+  },
+  {
+    "id": 15,
+    "name": "Fruit Salad with Honey Yogurt",
+    "ingredients": [
+      "1 apple (diced)",
+      "1 banana (sliced)",
+      "1/2 cup strawberries (halved)",
+      "1/2 cup blueberries",
+      "1/4 cup plain Greek yogurt",
+      "1 tablespoon honey"
+    ],
+    "instructions": [
+      "Mix the apple, banana, strawberries, and blueberries in a bowl.",
+      "In a separate small bowl, mix the yogurt with honey.",
+      "Drizzle the honey yogurt over the fruit and serve."
+    ],
+    "cookingTimeMinutes": 5,
+    "servings": 2,
+    "difficulty": "Easy",
+    "cuisine": "International",
+    "caloriesPerServing": 120,
+    "tags": [
+      "Vegetarian",
+      "Gluten-Free",
+      "Nut-Free"
+    ],
+    "image": "/assets/images/recipe16.webp",
+    "rating": 4.3,
+    "liked": false,
+    "favorite": false,
+    "mealType": "Dessert"
+  },
+  {
+    "id": 17,
+    "name": "Greek Yogurt Parfait",
+    "ingredients": [
+      "1 cup Greek yogurt",
+      "1/4 cup granola",
+      "1/4 cup mixed berries (blueberries, raspberries, strawberries)",
+      "1 tablespoon honey"
+    ],
+    "instructions": [
+      "In a glass or bowl, layer half of the Greek yogurt, followed by half of the granola and berries.",
+      "Repeat the layers with the remaining yogurt, granola, and berries.",
+      "Drizzle honey on top and serve immediately."
+    ],
+    "cookingTimeMinutes": 5,
+    "servings": 1,
+    "difficulty": "Easy",
+    "cuisine": "American",
+    "caloriesPerServing": 250,
+    "tags": [
+      "Vegetarian",
+      "Gluten-Free (with GF granola)"
+    ],
+    "image": "/assets/images/recipe17.webp",
+    "rating": 4.6,
+    "liked": false,
+    "favorite": false,
+    "mealType": "Snack"
+  }  
 ]

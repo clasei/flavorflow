@@ -17,8 +17,8 @@ import openImg from "../assets/icons/open.svg";
 
 import star0Img from "../assets/icons/star0.svg";
 import star1Img from "../assets/icons/star1.svg";
-import thumbsUp0Img from "../assets/icons/thumbsUp0.svg";
-import thumbsUp1Img from "../assets/icons/thumbsUp1.svg";
+// import thumbsUp0Img from "../assets/icons/thumbsUp0.svg";
+// import thumbsUp1Img from "../assets/icons/thumbsUp1.svg";
 import heart0Img from "../assets/icons/heart0.svg";
 import heart1Img from "../assets/icons/heart1.svg";
 import editImg from "../assets/icons/edit.svg";
@@ -32,11 +32,11 @@ function RecipeCard({ recipes, eachRecipe, handleDelete, index }) {
   }
   
 
-  const [liked, setLiked] = useState(eachRecipe.liked);
+  // const [liked, setLiked] = useState(eachRecipe.liked);
 
-  const handleLike = () => {
-    setLiked((prevLiked) => !prevLiked);
-  };
+  // const handleLike = () => {
+  //   setLiked((prevLiked) => !prevLiked);
+  // };
 
 
   const [ favorited, setFavorited ] = useState(false);
@@ -44,6 +44,8 @@ function RecipeCard({ recipes, eachRecipe, handleDelete, index }) {
   const handleFavorite = () => {
     setFavorited((prevFavorited) => !prevFavorited); 
   };
+
+  console.log(favorited)
 
 
   const getIcon = (tag) => {
@@ -94,9 +96,9 @@ function RecipeCard({ recipes, eachRecipe, handleDelete, index }) {
               <div onClick={handleFavorite}>
                 <img title="favorite" src={favorited ? heart1Img : heart0Img} alt="Favorite" />
               </div>
-              <div onClick={handleLike}>
+              {/* <div onClick={handleLike}>
                 <img title="like" src={liked ? thumbsUp1Img : thumbsUp0Img} alt="Like" />
-              </div>
+              </div> */}
             </div>
             <div className="rating">
               {getRating(eachRecipe.rating)}{" "}

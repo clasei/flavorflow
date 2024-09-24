@@ -254,7 +254,7 @@ body {
 
 .sidebarFav,
 .sidebarFavXs {
-  height: 200px;
+  height: 156px;
 }
 
 .sidebarFav {
@@ -264,7 +264,7 @@ body {
 
 .sidebarFavXs {
   margin-top: 38px;
-  gap: 24px;
+  gap: 18px;
 }
 
 .sidebarFooter,
