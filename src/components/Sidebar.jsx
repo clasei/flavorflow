@@ -25,20 +25,36 @@ function Sidebar() {
     <div className="sidebar" id="">
       <div className="sidebarIcons">
         <section className="sidebarProfileXs">
+        <Link to="/">
           <img className="logoImg" src={logoImg} alt="" />
+          </Link>
         </section>
      
         <section className="sidebarLinksXs">
-          <img src={homeImg} alt="home" />
+        <Link to="/" element={<Dashboard />}>
+          <img id="imgLogo" src={homeImg} alt="home" />
+          </Link>
+          <Link to="/About" element={<About />}>
           <img src={cardImg} alt="about us" />
+          </Link>
         </section>
         <hr />
         <section className="sidebarCategoriesXs">
+        <Link to={`/Recipes/Category/Breakfast`}>
           <img src={breackfastImg} alt="breackfast" />
+          </Link>
+          <Link to={`/Recipes/Category/Lunch`}>
           <img src={lunchImg} alt="lunch" />
-          <img src={dinnerImg} alt="home" />
-          <img src={dessertImg} alt="about us" />
-          <img src={snackImg} alt="about us" />
+          </Link>
+          <Link to={`/Recipes/Category/Dinner`}>
+          <img src={dinnerImg} alt="dinner" />
+          </Link>
+          <Link to={`/Recipes/Category/Dessert`}>
+          <img src={dessertImg} alt="dessert" />
+          </Link>
+          <Link to={`/Recipes/Category/Snack`}>
+          <img src={snackImg} alt="snack" />
+          </Link>
         </section>
         <hr />
 
@@ -52,14 +68,15 @@ function Sidebar() {
 
         <hr />
         <section className="sidebarFooterXs">
-          <img src={githubImg} alt="github" />
+        <a id="githubLink" href="https://github.com/clasei/flavorflow">
+          <img src={githubImg} alt="github" /></a>
         </section>
       </div>
 
       <div className="sidebarText">
         <section className="sidebarProfile">
           <img className="profileImg" src={profileImg} alt="" />
-          <p>Lira</p>
+          <p>Fei-Fei Li</p>
         </section>
 
      

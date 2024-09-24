@@ -80,6 +80,8 @@ body {
   align-items: center;
 }
 
+
+
 .logoImg {
   width: 65%;
   display: flex;
@@ -214,6 +216,10 @@ body {
   height: 64px;
 }
 
+.sidebarProfileXs{
+  margin-left: 16px;
+}
+
 .sidebarLinks,
 .sidebarLinksXs {
   height: 112px;
@@ -242,7 +248,7 @@ body {
 
 .sidebarCategoriesXs {
   margin-top: 51px;
-  gap: 24px;
+  gap: 17px;
   margin-bottom: -32px;
 }
 
@@ -416,17 +422,29 @@ body {
 
 .mainBar {
   background-color: var(--color-neutral600);
-  margin: 0;
+  
   padding: 0;
   height: 64px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: fixed;
   width: 100%;
   z-index: 100;
+  gap: 14%;
 }
 
+.mainBar p {
+  color: var(--color-secundary500);
+  margin: 0 9%;
+  font-family: var(--font-heading);
+
+}
+
+.mainBar input {
+  width: 20%;
+
+}
 .cardResume img,
 .cardTags img {
   width: 16px;
@@ -532,7 +550,7 @@ body {
   gap: 24px;
 }
 
-/* ---------------------------------------------------------------------------- */
+/* Form ---------------------------------------------------------------- */
 
 .new-recipe-form h4 {
   font-weight: bold;
