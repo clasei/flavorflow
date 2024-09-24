@@ -52,28 +52,21 @@ function App() {
   }
 
   // removes recipes by index (funcion 'imported' from RecipeList)
-  const handleDelete = (index) => {
-     const updatedRecipes = [...recipes]
-     updatedRecipes.splice(index, 1)
-     setRecipes(updatedRecipes)
-  }
-
   // const handleDelete = (index) => {
-  //   // Mostrar el cuadro de confirmación
-  //   const isConfirmed = window.confirm("¿Estás seguro de que deseas eliminar este elemento?");
+  //    const updatedRecipes = [...recipes]
+  //    updatedRecipes.splice(index, 1)
+  //    setRecipes(updatedRecipes)
+  // }
+
+  const handleDelete = (index) => {
+    const isConfirmed = window.confirm("¿Estás seguro de que deseas eliminar este elemento?");
     
-  //   // Si el usuario confirma la acción
-  //   if (isConfirmed) {
-  //     // Clonamos el array de recetas
-  //     const updatedRecipes = [...recipes];
-      
-  //     // Eliminamos el elemento en la posición 'index'
-  //     updatedRecipes.splice(index, 1);
-      
-  //     // Actualizamos el estado de recetas
-  //     setRecipes(updatedRecipes);
-  //   }
-  // };
+    if (isConfirmed) {
+      const updatedRecipes = [...recipes];
+      updatedRecipes.splice(index, 1);
+      setRecipes(updatedRecipes);
+    }
+  };
 
 
 

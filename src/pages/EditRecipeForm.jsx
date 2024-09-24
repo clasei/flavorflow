@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { useParams  } from "react-router-dom"
+import { useParams, useNavigate  } from "react-router-dom"
+
 
 import veganImg from "../assets/icons/vegan.svg";
 import lactoseImg from "../assets/icons/lactose.svg";
@@ -33,7 +34,7 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
     // instructions:recipeToEdit.instructions
   });
   
-
+  const navigate = useNavigate();
   const handlerUnique = (e) => {
     const { name, type, value, checked } = e.target;
     setEditRecipe((currentState) => ({
@@ -60,7 +61,7 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
     console.log("recipe updated", editRecipe);
 
     onEditRecipe(editRecipe);
-
+    navigate("/");
   };
  
   

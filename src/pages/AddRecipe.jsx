@@ -1,5 +1,5 @@
 import { useState} from "react";
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -9,7 +9,6 @@ import glutenImg from "../assets/icons/gluten.svg";
 import nutImg from "../assets/icons/nut.png";
 
 function AddRecipe({ onAddRecipe }) {
-  const navigate = useNavigate()
   const [newAddedRecipe, setNewAddedRecipe] = useState({
     name: "",
     cookingTimeMinutes: 0,
@@ -26,6 +25,8 @@ function AddRecipe({ onAddRecipe }) {
     instructions: '',
   });
 
+
+  const navigate = useNavigate();
   const handlerUnique = (e) => {
     const { name, type, value, checked } = e.target;
 
@@ -88,6 +89,7 @@ function AddRecipe({ onAddRecipe }) {
       ingredients: [], // check empty array depending on final type
       instructions: [], // check empty array depending on final type
     });
+    navigate("/");
   };
 
   return (
@@ -289,14 +291,13 @@ function AddRecipe({ onAddRecipe }) {
           </label>
          
          
-          <button type="submit">Add Recipe</button>
-          {/* 
-          <Link to={"/"}>
-            <button type="submit">Add Recipe</button>
-          </Link>
+           <button type="submit">Add Recipe</button> 
+        
+        
+
+
           
-          
-          */} 
+     
          
         </form>
       </div>
