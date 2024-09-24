@@ -15,13 +15,13 @@ function About() {
     <section className='chefs'>
     <div className='chefCard'>
         <h3>Clara Seijo</h3>
-        <p>Web Dev & ...</p>
+        <p>Web Dev</p>
         <a href="https://www.linkedin.com/in/claraseijo/">LinkedIn</a>
       </div>
 
       <div className='chefCard'>
         <h3>Núria Soley</h3>
-        <p>Web Dev & ...</p>
+        <p>Web Dev & Physical Therapist</p>
         <a href="https://www.linkedin.com/in/n%C3%BAria-soley-arnau-905a67147/">LinkedIn</a>
       </div>
       <div className='chefCard'>

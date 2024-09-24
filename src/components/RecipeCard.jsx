@@ -49,14 +49,16 @@ function RecipeCard({ recipes, eachRecipe, allFavorites, setAllFavorites, handle
     
     setFavorited((prevFavorited) => !prevFavorited); 
 
-    // console.log(favorited)
+
     const clone = [...allFavorites]
+    
     clone.push(eachRecipe)
     favorited.splice(index, 1)
     setAllFavorites(clone)
+    console.log("debbuging", clone)
   };
 
-  console.log(favorited)
+  // console.log(favorited)
 
   // const handleFavorite = (index) => {
   //   if (eachRecipe.favorite === true) {
@@ -121,7 +123,10 @@ function RecipeCard({ recipes, eachRecipe, allFavorites, setAllFavorites, handle
 
           <div className="topIcons">
             <div className="fav">
-              <div onClick={handleFavorite} >
+               <div onClick={handleFavorite} >
+
+              {/* <div onClick={() => handleFavorite(eachRecipe)} > */}
+              
                 <img title="favorite" src={favorited ? heart1Img : heart0Img} alt="Favorite" />
               </div>
               {/* <div onClick={handleLike}>
