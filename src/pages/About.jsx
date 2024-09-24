@@ -13,21 +13,23 @@ function About() {
   <span>👩‍🍳 A quirky squad that accidentally mixed together in <span  id='yellowSpan'>Sala 12</span> and never looked back.</span>
   <img id='about' src={about} alt="sala 13" />
     <section className='chefs'>
-      <div className='chefCard'>
-        <h3>Ana Badolato</h3>
-        <p>Web Dev & UX Designer</p>
-        <a href="https://www.linkedin.com/in/anabadolatomunuera/">LinkedIn</a>
-      </div>
-      <div className='chefCard'>
+    <div className='chefCard'>
         <h3>Clara Seijo</h3>
         <p>Web Dev & ...</p>
         <a href="https://www.linkedin.com/in/claraseijo/">LinkedIn</a>
       </div>
+
       <div className='chefCard'>
         <h3>Núria Soley</h3>
         <p>Web Dev & ...</p>
         <a href="https://www.linkedin.com/in/n%C3%BAria-soley-arnau-905a67147/">LinkedIn</a>
       </div>
+      <div className='chefCard'>
+        <h3>Ana Badolato</h3>
+        <p>Web Dev & UX Designer</p>
+        <a href="https://www.linkedin.com/in/anabadolatomunuera/">LinkedIn</a>
+      </div>
+    
       
     </section>
     <div  className='aboutDescription'>
