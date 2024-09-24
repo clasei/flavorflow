@@ -59,7 +59,9 @@ function Sidebar() {
         <hr />
 
         <section className="sidebarFavXs">
+        <Link to={"/Recipes/Favorites"}>
           <img src={heart1Img} alt="favorite" />
+          </Link>
           <img src={thumbsUp1Img} alt="liked" />
           <Link className="buttonSmall" to="/AddRecipe">
             <img id="buttonLargeAddImg" src={addImg} alt="" />
@@ -121,7 +123,9 @@ function Sidebar() {
 
         <section className="sidebarFav">
           <p className="smallHeader">Featured</p>
+          <Link to={"/Recipes/Favorites"}>
           <p>Favorites</p>
+          </Link>
           <p>Liked</p>
           <Link className="buttonLarge" to="/AddRecipe">
             <img id="buttonLargeAddImg" src={addImg} alt="" />

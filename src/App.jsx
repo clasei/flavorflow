@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound.jsx'
 import RecipeDetails from './pages/RecipeDetails.jsx'
 import AddRecipe from './pages/AddRecipe.jsx'
 import Category from './pages/Category.jsx'
+import Favorites from './pages/Favorites.jsx'
 // .json added !!!
 import RecipesFromJSON from "./data/recipes.json"
 import EditRecipeForm from "./pages/EditRecipeForm.jsx"
@@ -98,6 +99,7 @@ function App() {
           {/* changed to <Route path="/Recipes/Category/:mealType" */}
           {/* Sidebar links updtaed to <Link to={`/Recipes/Category/Whatever`}> */}
           <Route path="/Recipes/Category/:mealType" element={<Category recipes={recipes} handleDelete={handleDelete} />}></Route>
+          <Route path="/Recipes/Favorites" element={<Favorites recipes={recipes} handleDelete={handleDelete} />}></Route>
           <Route path="/About" element={<About/>}></Route>
           <Route path="/Recipes/Edit/:recipeId" element={<EditRecipeForm recipes={recipes} onEditRecipe={onEditRecipe} />}></Route>
 

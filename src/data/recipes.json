@@ -61,8 +61,8 @@
     ],
     "image": "/assets/images/recipe2.webp",
     "rating": 4,
-    "liked": true,
-    "favorite": true,
+    "liked": false,
+    "favorite": false,
     "mealType": "Dinner"
   },
   {
@@ -93,7 +93,7 @@
     ],
     "image": "/assets/images/recipe3.webp",
     "rating": 3,
-    "liked": true,
+    "liked": false,
     "favorite": false,
     "mealType": "Dinner"
   },
@@ -126,7 +126,7 @@
     ],
     "image": "/assets/images/recipe4.webp",
     "rating": 4,
-    "liked": true,
+    "liked": false,
     "favorite": false,
     "mealType": "Lunch"
   },
@@ -160,8 +160,8 @@
     ],
     "image": "/assets/images/recipe5.webp",
     "rating": 3,
-    "liked": true,
-    "favorite": true,
+    "liked": false,
+    "favorite": false,
     "mealType": "Dinner"
   },
   {
@@ -192,7 +192,7 @@
     ],
     "image": "/assets/images/recipe6.webp",
     "rating": 4,
-    "liked": true,
+    "liked": false,
     "favorite": false,
     "mealType": "Dinner"
   },
@@ -223,8 +223,8 @@
     ],
     "image": "/assets/images/recipe7.webp",
     "rating": 5,
-    "liked": true,
-    "favorite": true,
+    "liked": false,
+    "favorite": false,
     "mealType": "Breakfast"
   },
   {
@@ -258,7 +258,7 @@
     ],
     "image": "/assets/images/recipe8.webp",
     "rating": 3,
-    "liked": true,
+    "liked": false,
     "favorite": false,
     "mealType": "Lunch"
   },
@@ -289,7 +289,7 @@
     ],
     "image": "/assets/images/recipe9.webp",
     "rating": 5,
-    "liked": true,
+    "liked": false,
     "favorite": false,
     "mealType": "Breakfast"
   },
@@ -321,8 +321,8 @@
     ],
     "image": "/assets/images/recipe10.webp",
     "rating": 4,
-    "liked": true,
-    "favorite": true,
+    "liked": false,
+    "favorite": false,
     "mealType": "Dinner"
   },
   {
@@ -353,7 +353,7 @@
     ],
     "image": "/assets/images/recipe11.webp",
     "rating": 4,
-    "liked": true,
+    "liked": false,
     "favorite": false,
     "mealType": "Dinner"
   },
@@ -385,8 +385,8 @@
     ],
     "image": "/assets/images/recipe12.webp",
     "rating": 5,
-    "liked": true,
-    "favorite": true,
+    "liked": false,
+    "favorite": false,
     "mealType": "Snack"
   }
 ]

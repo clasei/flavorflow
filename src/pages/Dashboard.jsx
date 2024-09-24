@@ -8,7 +8,7 @@ function Dashboard({ recipes, handleDelete }) {
 const [searchTerm, setSearchTerm] = useState("");
 
 // *** Filtramos las recetas solo si el campo de búsqueda no está vacío ***
-const filteredRecipes = searchTerm
+const searchedRecipes = searchTerm
   ? recipes.filter(recipe => 
       recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
     )
@@ -29,7 +29,7 @@ const filteredRecipes = searchTerm
       </div>
       <main id="containerRecipes">
         {/* *** Pasamos las recetas filtradas o todas las recetas si no hay texto en el buscador *** */}
-        <RecipeList recipes={filteredRecipes} handleDelete={handleDelete} />
+        <RecipeList recipes={searchedRecipes} handleDelete={handleDelete} />
       </main>
       
       <Link id="buttonDashboard" to="/AddRecipe">

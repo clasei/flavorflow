@@ -23,7 +23,7 @@ import heart0Img from "../assets/icons/heart0.svg";
 import heart1Img from "../assets/icons/heart1.svg";
 import editImg from "../assets/icons/edit.svg";
 
-function RecipeCard({ eachRecipe, handleDelete, index }) {
+function RecipeCard({ recipes, eachRecipe, handleDelete, index }) {
 
 
   if (!eachRecipe) {
@@ -33,15 +33,18 @@ function RecipeCard({ eachRecipe, handleDelete, index }) {
   
 
   const [liked, setLiked] = useState(eachRecipe.liked);
-  const [favorited, setFavorited] = useState(false);
 
   const handleLike = () => {
     setLiked((prevLiked) => !prevLiked);
   };
 
+
+  const [ favorited, setFavorited ] = useState(false);
+
   const handleFavorite = () => {
-    setFavorited((prevFavorited) => !prevFavorited);
+    setFavorited((prevFavorited) => !prevFavorited); 
   };
+
 
   const getIcon = (tag) => {
     switch (tag) {
