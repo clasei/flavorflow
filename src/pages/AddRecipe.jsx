@@ -1,7 +1,5 @@
-import { useState} from "react";
-import { useNavigate } from 'react-router-dom'
-
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import veganImg from "../assets/icons/vegan.svg";
 import lactoseImg from "../assets/icons/lactose.svg";
@@ -21,19 +19,16 @@ function AddRecipe({ onAddRecipe }) {
     mealType: "",
     liked: false,
     tags: [],
-    ingredients: '',
-    instructions: '',
+    ingredients: "",
+    instructions: "",
   });
-
 
   const navigate = useNavigate();
   const handlerUnique = (e) => {
     const { name, type, value, checked } = e.target;
 
     setNewAddedRecipe((currentState) => ({
-      // superficial clone from the currentState to create a new version including the input changes
       ...currentState,
-      // checks values as well as checkboxes
       [name]: type === "checkbox" ? checked : value,
     }));
   };
@@ -48,32 +43,11 @@ function AddRecipe({ onAddRecipe }) {
     }));
   };
 
-  /* --> need to review this in the future if adding different handlers <--
-
-  const handleMealTypeChange = (e) => {
-    const { name, checked } = e.target;
-    // Si está marcado, lo añadimos al array
-    if (checked) {
-      setMealType((prevMealType) => [...prevMealType, name]);
-    } 
-    // Si no está marcado, lo eliminamos del array
-    else {
-      setMealType((prevMealType) => prevMealType.filter((mealType) => mealType !== name));
-    }
-  }
-
-  const handlerIngredients = (e) => setIngredients(event.target.value);
-  const handlerInstructions = (e) => setInstructions(event.target.value)
-  */
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("new recipe to add", newAddedRecipe);
-
     onAddRecipe(newAddedRecipe);
 
-    // restarts form aka form clean after submit
     setNewAddedRecipe({
       name: "",
       cookingTimeMinutes: 0,
@@ -86,8 +60,8 @@ function AddRecipe({ onAddRecipe }) {
       mealType: "",
       liked: false,
       tags: [],
-      ingredients: [], // check empty array depending on final type
-      instructions: [], // check empty array depending on final type
+      ingredients: [],
+      instructions: [],
     });
     navigate("/");
   };
@@ -96,7 +70,6 @@ function AddRecipe({ onAddRecipe }) {
     <div className="mainContainer">
       <div className="mainBar">
         <p>New Recipe</p>
-        
       </div>
       <div className="new-recipe-form">
         <h4>Add a Recipe</h4>
@@ -140,14 +113,18 @@ function AddRecipe({ onAddRecipe }) {
 
           <label className="largeLabel">
             Meal Type
-            <select name="mealType" onChange={handlerUnique} value={newAddedRecipe.mealType} >
-                <option value="">-- None --</option>
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-                <option value="Snack">Snack</option>
-                <option value="Dessert">Dessert</option>
-              </select>
+            <select
+              name="mealType"
+              onChange={handlerUnique}
+              value={newAddedRecipe.mealType}
+            >
+              <option value="">-- None --</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner</option>
+              <option value="Snack">Snack</option>
+              <option value="Dessert">Dessert</option>
+            </select>
           </label>
 
           <label className="smallLabel">
@@ -289,16 +266,8 @@ function AddRecipe({ onAddRecipe }) {
               value={newAddedRecipe.image}
             />
           </label>
-         
-         
-           <button type="submit">Add Recipe</button> 
-        
-        
 
-
-          
-     
-         
+          <button type="submit">Add Recipe</button>
         </form>
       </div>
     </div>

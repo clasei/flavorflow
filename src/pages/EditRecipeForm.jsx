@@ -10,37 +10,22 @@ import nutImg from "../assets/icons/nut.png";
 function EditRecipeForm({ recipes, onEditRecipe }) {
 
   const { recipeId } = useParams()
-  console.log("recipeId", recipeId)
   
   const recipeToEdit = recipes.find(eachRecipe => eachRecipe.id == recipeId)
   
   const [editRecipe, setEditRecipe] = useState(
     {
-      // provisionally added
+    
       ...recipeToEdit
-
-    // name: recipeToEdit.name,
-    // cookingTimeMinutes: recipeToEdit.cookingTimeMinutes,
-    // servings: recipeToEdit.servings,
-    // difficulty: recipeToEdit.difficulty,
-    // cuisine: recipeToEdit.cuisine,
-    // caloriesPerServing: recipeToEdit.caloriesPerServing,
-    // image: recipeToEdit.image,
-    // rating: recipeToEdit.rating,
-    // mealType: recipeToEdit.mealType,
-    // liked: recipeToEdit.liked,
-    // tags: recipeToEdit.tags,
-    // ingredients: recipeToEdit.ingredients,
-    // instructions:recipeToEdit.instructions
   });
   
   const navigate = useNavigate();
   const handlerUnique = (e) => {
     const { name, type, value, checked } = e.target;
     setEditRecipe((currentState) => ({
-      // superficial clone from the currentState to create a new version including the input changes
+
       ...currentState,
-      // checks values as well as checkboxes
+
       [name]: type === "checkbox" ? checked : value,
     }));
   };
@@ -57,8 +42,6 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("recipe updated", editRecipe);
 
     onEditRecipe(editRecipe);
     navigate("/");
@@ -261,9 +244,7 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
           
             
           <button type="submit">Update Recipe</button>
-          {/* <Link to={"/"}>
-            <button type="submit">Add Recipe</button>
-          </Link> */}
+
         </form>
       </div>
     </div>

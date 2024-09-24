@@ -1,25 +1,21 @@
-// import { useState } from "react"
-// import {Routes, Route, Link} from "react-router-dom"
-// import RecipeCard from "./RecipeCard"
-// import Recipes from "../data/recipes.json"
-// import RecipeDetails from "../pages/RecipeDetails.jsx"
-// previous lines not needed, recipes and handleDelete props received from App
-import RecipeCard from "./RecipeCard"
-
+import RecipeCard from "./RecipeCard";
 
 function RecipeList({ recipes, allFavorites, setAllFavorites, handleDelete }) {
-
-
   return (
-    <div  id="eachCardOnList">
-       {recipes.map((eachRecipe, index) => (
+    <div id="eachCardOnList">
+      {recipes.map((eachRecipe, index) => (
         <div key={index}>
-          <RecipeCard eachRecipe={eachRecipe} allFavorites={allFavorites} setAllFavorites={setAllFavorites} handleDelete={handleDelete} index={index} />
-
-         </div>
-        ))}
+          <RecipeCard
+            eachRecipe={eachRecipe}
+            allFavorites={allFavorites}
+            setAllFavorites={setAllFavorites}
+            handleDelete={handleDelete}
+            index={index}
+          />
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
-export default RecipeList
+export default RecipeList;

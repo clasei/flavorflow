@@ -17,11 +17,14 @@ import star1Img from "../assets/icons/star1.svg";
 
 function RecipeDetails({ recipes, handleDelete }) {
   const { recipeName } = useParams();
-  const recipeToDisplay = recipes.find(eachRecipe => eachRecipe.name === recipeName);
+  const recipeToDisplay = recipes.find(
+    (eachRecipe) => eachRecipe.name === recipeName
+  );
 
-  // Manejo del caso en que el nombre de la receta no se encuentra
   if (!recipeToDisplay) {
-    return <div>Recipe details - No recipe found with the name "{recipeName}"</div>;
+    return (
+      <div>Recipe details - No recipe found with the name "{recipeName}"</div>
+    );
   }
 
   const getIcon = (tag) => {
@@ -62,27 +65,17 @@ function RecipeDetails({ recipes, handleDelete }) {
       <div className="recipeComplete" key={recipeToDisplay.id}>
         <section className="recipeLeftSide">
           <div>
-            <img className="recipeImgDetail" src={recipeToDisplay.image} alt={recipeToDisplay.name} />
+            <img
+              className="recipeImgDetail"
+              src={recipeToDisplay.image}
+              alt={recipeToDisplay.name}
+            />
           </div>
-
-          {/* Si vas a agregar aquí el rating, like o favorite, descomentar */}
-          {/* <div>
-            <div onClick={handleFavorite}>
-              <img title="favorite" src={favorited ? heart1Img : heart0Img} alt="Favorite" />
-            </div>
-            <div onClick={handleLike}>
-              <img title="like" src={liked ? thumbsUp1Img : thumbsUp0Img} alt="Like" />
-            </div>
-            <div className="rating">
-              {getRating(recipeToDisplay.rating)}{" "}
-            </div>
-          </div> */}
         </section>
 
         <section className="recipeRightSide">
           <div className="recipeDetailsHead">
             <h1>{recipeToDisplay.name}</h1>
-          
           </div>
           <hr />
           <section className="recipeDetailscardResume">
@@ -107,7 +100,7 @@ function RecipeDetails({ recipes, handleDelete }) {
             </div>
           </section>
 
-          <div   className="recipeDetailsText">
+          <div className="recipeDetailsText">
             <h2>Ingredients</h2>
             <p>{recipeToDisplay.ingredients}</p>
           </div>
@@ -117,36 +110,34 @@ function RecipeDetails({ recipes, handleDelete }) {
             <p>{recipeToDisplay.instructions}</p>
           </div>
 
-            <section className="allDetailsTag">
+          <section className="allDetailsTag">
             <div className="recipeDetailsSimpleTags">
-            <p>{recipeToDisplay.mealType}</p>
-            <p>{recipeToDisplay.cuisine}</p>
-          </div>
+              <p>{recipeToDisplay.mealType}</p>
+              <p>{recipeToDisplay.cuisine}</p>
+            </div>
 
-          <div className="recipeDetailsTags">
-            {recipeToDisplay.tags.map((tag, index) => (
-              <div key={index} className="detailsTag">
-                {getIcon(tag)}
-                {tag}
-              </div>
-            ))}
-          </div>
-            </section>
+            <div className="recipeDetailsTags">
+              {recipeToDisplay.tags.map((tag, index) => (
+                <div key={index} className="detailsTag">
+                  {getIcon(tag)}
+                  {tag}
+                </div>
+              ))}
+            </div>
+          </section>
 
-          <hr/>
+          <hr />
           <section className="detailsLeftActions">
-            
-            
-              <button className="deleteBtn" onClick={() => handleDelete(recipes.indexOf(recipeToDisplay))}>
-                {/* Usa el index del recipeToDisplay dentro de recipes */}
-                <img title="delete" src={deleteImg} alt="delete" />
-              </button>
+            <button
+              className="deleteBtn"
+              onClick={() => handleDelete(recipes.indexOf(recipeToDisplay))}
+            >
+              <img title="delete" src={deleteImg} alt="delete" />
+            </button>
 
-              {/* gets recipeToDisplay.id for the redirection */}
-              <Link to={`/Recipes/Edit/${recipeToDisplay.id}`}>
-                <img title="edit" id="detailsEdit" src={editImg} alt="edit" />
-              </Link>
-           
+            <Link to={`/Recipes/Edit/${recipeToDisplay.id}`}>
+              <img title="edit" id="detailsEdit" src={editImg} alt="edit" />
+            </Link>
           </section>
         </section>
       </div>

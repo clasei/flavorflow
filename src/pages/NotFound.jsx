@@ -9,7 +9,7 @@ function NotFound() {
         <p>Page not found</p>
       </div>
         
-      <div class='aboutContainer'>
+      <div className='aboutContainer'>
   <h1>🥔 Oops! We overcooked the potatoes!</h1>
   <span>It seems this page has turned into mashed potatoes. Let’s whisk you back to something tastier! 🍽️</span>
   <img id='notFound' src={error} alt="error" />
