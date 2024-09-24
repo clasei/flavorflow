@@ -260,6 +260,9 @@ function EditRecipeForm({ recipes, onEditRecipe }) {
           
             
           <button type="submit">Update Recipe</button>
+          {/* <Link to={"/"}>
+            <button type="submit">Add Recipe</button>
+          </Link> */}
         </form>
       </div>
     </div>

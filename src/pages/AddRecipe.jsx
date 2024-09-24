@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState} from "react";
+// import { useNavigate } from 'react-router-dom'
 
 
 
@@ -8,6 +9,7 @@ import glutenImg from "../assets/icons/gluten.svg";
 import nutImg from "../assets/icons/nut.png";
 
 function AddRecipe({ onAddRecipe }) {
+  const navigate = useNavigate()
   const [newAddedRecipe, setNewAddedRecipe] = useState({
     name: "",
     cookingTimeMinutes: 0,
@@ -287,9 +289,15 @@ function AddRecipe({ onAddRecipe }) {
           </label>
          
          
-          
-            
           <button type="submit">Add Recipe</button>
+          {/* 
+          <Link to={"/"}>
+            <button type="submit">Add Recipe</button>
+          </Link>
+          
+          
+          */} 
+         
         </form>
       </div>
     </div>

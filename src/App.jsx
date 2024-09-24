@@ -58,6 +58,25 @@ function App() {
      setRecipes(updatedRecipes)
   }
 
+  // const handleDelete = (index) => {
+  //   // Mostrar el cuadro de confirmación
+  //   const isConfirmed = window.confirm("¿Estás seguro de que deseas eliminar este elemento?");
+    
+  //   // Si el usuario confirma la acción
+  //   if (isConfirmed) {
+  //     // Clonamos el array de recetas
+  //     const updatedRecipes = [...recipes];
+      
+  //     // Eliminamos el elemento en la posición 'index'
+  //     updatedRecipes.splice(index, 1);
+      
+  //     // Actualizamos el estado de recetas
+  //     setRecipes(updatedRecipes);
+  //   }
+  // };
+
+
+
   const onEditRecipe = (editedRecipe) => {
     console.log('adding new recipe via App', onEditRecipe)
     // // next line commented for testing
@@ -70,6 +89,32 @@ function App() {
       )
     })
   }
+
+  // *****************************************
+
+  // const [ favorited, setFavorited ] = useState(false);
+
+  // const handleFavorite = (favoritedRecipe) => {
+
+  //   setRecipes((currentStateRecipes) => {
+  //     return currentStateRecipes.map((eachRecipe) => eachRecipe.favorite === favoritedRecipe.favorite ? {...eachRecipe, favorited} : eachRecipe
+  //     )
+  //   })
+  //   setFavorited((prevFavorited) => !prevFavorited); 
+  // }
+
+  // *****************************************
+
+  const [ allFavorites, setAllFavorites ] = useState([])
+
+  // const handleFavorite = () => {
+  //   setFavorited((prevFavorited) => !prevFavorited); 
+  //   // console.log(favorited)
+  // };
+
+
+
+
 
   return (
     <>
@@ -91,7 +136,7 @@ function App() {
         <Sidebar />
        
         <Routes>
-          <Route path="/" element={<Dashboard recipes={recipes} handleDelete={handleDelete} />}></Route>
+          <Route path="/" element={<Dashboard recipes={recipes} allFavorites={allFavorites} setAllFavorites={setAllFavorites} handleDelete={handleDelete} />}></Route>
 
           <Route path="/AddRecipe" element={<AddRecipe onAddRecipe={addRecipe} />}></Route>
           <Route path="/Recipes/:recipeName" element={<RecipeDetails recipes={recipes} handleDelete={handleDelete}/>}></Route>
@@ -99,7 +144,7 @@ function App() {
           {/* changed to <Route path="/Recipes/Category/:mealType" */}
           {/* Sidebar links updtaed to <Link to={`/Recipes/Category/Whatever`}> */}
           <Route path="/Recipes/Category/:mealType" element={<Category recipes={recipes} handleDelete={handleDelete} />}></Route>
-          <Route path="/Recipes/Favorites" element={<Favorites recipes={recipes} handleDelete={handleDelete} />}></Route>
+          <Route path="/Recipes/Favorites" element={<Favorites recipes={recipes} allFavorites={allFavorites} setAllFavorites={setAllFavorites} handleDelete={handleDelete} />}></Route>
           <Route path="/About" element={<About/>}></Route>
           <Route path="/Recipes/Edit/:recipeId" element={<EditRecipeForm recipes={recipes} onEditRecipe={onEditRecipe} />}></Route>
 

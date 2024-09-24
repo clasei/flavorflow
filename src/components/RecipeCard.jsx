@@ -23,7 +23,7 @@ import heart0Img from "../assets/icons/heart0.svg";
 import heart1Img from "../assets/icons/heart1.svg";
 import editImg from "../assets/icons/edit.svg";
 
-function RecipeCard({ recipes, eachRecipe, handleDelete, index }) {
+function RecipeCard({ recipes, eachRecipe, allFavorites, setAllFavorites, handleDelete, index }) {
 
 
   if (!eachRecipe) {
@@ -31,6 +31,7 @@ function RecipeCard({ recipes, eachRecipe, handleDelete, index }) {
     return null // render stops if tehre's no data
   }
   
+  console.log(allFavorites)
 
   // const [liked, setLiked] = useState(eachRecipe.liked);
 
@@ -39,13 +40,40 @@ function RecipeCard({ recipes, eachRecipe, handleDelete, index }) {
   // };
 
 
+  // ********************************
+
   const [ favorited, setFavorited ] = useState(false);
 
-  const handleFavorite = () => {
+  const handleFavorite = (index) => {
+
+    
     setFavorited((prevFavorited) => !prevFavorited); 
+
+    // console.log(favorited)
+    const clone = [...allFavorites]
+    clone.push(eachRecipe)
+    favorited.splice(index, 1)
+    setAllFavorites(clone)
   };
 
   console.log(favorited)
+
+  // const handleFavorite = (index) => {
+  //   if (eachRecipe.favorite === true) {
+  //     eachRecipe.favorite = false;
+  //     allFavorites.splice(index, 1);
+  //   } else {
+  //     eachRecipe.favorite = true;
+  //     const clone = [...allFavorites];
+  //     clone.push(eachRecipe);
+  //     setFavorited(clone);
+  //   }
+  //   console.log(favorited);
+  // };
+
+  // ********************************
+
+  
 
 
   const getIcon = (tag) => {
@@ -93,7 +121,7 @@ function RecipeCard({ recipes, eachRecipe, handleDelete, index }) {
 
           <div className="topIcons">
             <div className="fav">
-              <div onClick={handleFavorite}>
+              <div onClick={handleFavorite} >
                 <img title="favorite" src={favorited ? heart1Img : heart0Img} alt="Favorite" />
               </div>
               {/* <div onClick={handleLike}>

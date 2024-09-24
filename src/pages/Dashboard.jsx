@@ -3,7 +3,7 @@ import { useState} from "react"
 import RecipeList from '../components/RecipeList.jsx'
 import addImg from "../assets/icons/add.svg";
 
-function Dashboard({ recipes, handleDelete }) {
+function Dashboard({ recipes, allFavorites, setAllFavorites, handleDelete }) {
 // *** Añadimos el estado para el campo de búsqueda ***
 const [searchTerm, setSearchTerm] = useState("");
 
@@ -29,7 +29,7 @@ const searchedRecipes = searchTerm
       </div>
       <main id="containerRecipes">
         {/* *** Pasamos las recetas filtradas o todas las recetas si no hay texto en el buscador *** */}
-        <RecipeList recipes={searchedRecipes} handleDelete={handleDelete} />
+        <RecipeList recipes={searchedRecipes} allFavorites={allFavorites} setAllFavorites={setAllFavorites} handleDelete={handleDelete} />
       </main>
       
       <Link id="buttonDashboard" to="/AddRecipe">
